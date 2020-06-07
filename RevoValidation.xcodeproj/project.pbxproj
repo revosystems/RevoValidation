@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491DC17C707D4A3F5EE10C17 /* Pods_RevoValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DCDF4D0A7FC02720C5296F /* Pods_RevoValidation.framework */; };
+		6E1A2B9BCEC658AAE060A6F8 /* Pods_RevoValidationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36822AE8D9AA7823F26B72EA /* Pods_RevoValidationTests.framework */; };
 		BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */; };
 		BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AEB248D23B0004A7C76 /* SceneDelegate.swift */; };
 		BBB84AEE248D23B0004A7C76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AED248D23B0004A7C76 /* ViewController.swift */; };
@@ -14,6 +16,15 @@
 		BBB84AF3248D23B3004A7C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB84AF2248D23B3004A7C76 /* Assets.xcassets */; };
 		BBB84AF6248D23B3004A7C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB84AF4248D23B3004A7C76 /* LaunchScreen.storyboard */; };
 		BBB84B01248D23B3004A7C76 /* RevoValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B00248D23B3004A7C76 /* RevoValidationTests.swift */; };
+		BBB84B15248D23F6004A7C76 /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B0C248D23F6004A7C76 /* FormValidation.swift */; };
+		BBB84B16248D23F6004A7C76 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B0D248D23F6004A7C76 /* Validation.swift */; };
+		BBB84B17248D23F6004A7C76 /* RuleContainsNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B0F248D23F6004A7C76 /* RuleContainsNumber.swift */; };
+		BBB84B18248D23F6004A7C76 /* RuleContainSpecialChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B10248D23F6004A7C76 /* RuleContainSpecialChars.swift */; };
+		BBB84B19248D23F6004A7C76 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B11248D23F6004A7C76 /* RuleLength.swift */; };
+		BBB84B1A248D23F6004A7C76 /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B12248D23F6004A7C76 /* RuleRequired.swift */; };
+		BBB84B1B248D23F6004A7C76 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B13248D23F6004A7C76 /* RuleEmail.swift */; };
+		BBB84B1C248D23F6004A7C76 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B14248D23F6004A7C76 /* Rule.swift */; };
+		BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36822AE8D9AA7823F26B72EA /* Pods_RevoValidationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevoValidationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6136D1DBFB9B4C082876BA /* Pods-RevoValidationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidationTests.debug.xcconfig"; path = "Target Support Files/Pods-RevoValidationTests/Pods-RevoValidationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		805C1B35127BE10067098EF2 /* Pods-RevoValidation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidation.release.xcconfig"; path = "Target Support Files/Pods-RevoValidation/Pods-RevoValidation.release.xcconfig"; sourceTree = "<group>"; };
+		8383502DEDFB2244E5F173A4 /* Pods-RevoValidationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidationTests.release.xcconfig"; path = "Target Support Files/Pods-RevoValidationTests/Pods-RevoValidationTests.release.xcconfig"; sourceTree = "<group>"; };
 		BBB84AE6248D23B0004A7C76 /* RevoValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevoValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB84AEB248D23B0004A7C76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +53,17 @@
 		BBB84AFC248D23B3004A7C76 /* RevoValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevoValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB84B00248D23B3004A7C76 /* RevoValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevoValidationTests.swift; sourceTree = "<group>"; };
 		BBB84B02248D23B3004A7C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB84B0C248D23F6004A7C76 /* FormValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidation.swift; sourceTree = "<group>"; };
+		BBB84B0D248D23F6004A7C76 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		BBB84B0F248D23F6004A7C76 /* RuleContainsNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleContainsNumber.swift; sourceTree = "<group>"; };
+		BBB84B10248D23F6004A7C76 /* RuleContainSpecialChars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleContainSpecialChars.swift; sourceTree = "<group>"; };
+		BBB84B11248D23F6004A7C76 /* RuleLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleLength.swift; sourceTree = "<group>"; };
+		BBB84B12248D23F6004A7C76 /* RuleRequired.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleRequired.swift; sourceTree = "<group>"; };
+		BBB84B13248D23F6004A7C76 /* RuleEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleEmail.swift; sourceTree = "<group>"; };
+		BBB84B14248D23F6004A7C76 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNumeric.swift; sourceTree = "<group>"; };
+		C9DCDF4D0A7FC02720C5296F /* Pods_RevoValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevoValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E1BF652DD65090FC8F3ADD /* Pods-RevoValidation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidation.debug.xcconfig"; path = "Target Support Files/Pods-RevoValidation/Pods-RevoValidation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491DC17C707D4A3F5EE10C17 /* Pods_RevoValidation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +79,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E1A2B9BCEC658AAE060A6F8 /* Pods_RevoValidationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14D31A1115652418A0BAB562 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9DCDF4D0A7FC02720C5296F /* Pods_RevoValidation.framework */,
+				36822AE8D9AA7823F26B72EA /* Pods_RevoValidationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BBB84ADD248D23B0004A7C76 = {
 			isa = PBXGroup;
 			children = (
 				BBB84AE8248D23B0004A7C76 /* RevoValidation */,
 				BBB84AFF248D23B3004A7C76 /* RevoValidationTests */,
 				BBB84AE7248D23B0004A7C76 /* Products */,
+				E4CCC2E07E84BA62BDDDD8D3 /* Pods */,
+				14D31A1115652418A0BAB562 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +118,7 @@
 		BBB84AE8248D23B0004A7C76 /* RevoValidation */ = {
 			isa = PBXGroup;
 			children = (
+				BBB84B0B248D23BA004A7C76 /* src */,
 				BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */,
 				BBB84AEB248D23B0004A7C76 /* SceneDelegate.swift */,
 				BBB84AED248D23B0004A7C76 /* ViewController.swift */,
@@ -99,6 +139,41 @@
 			path = RevoValidationTests;
 			sourceTree = "<group>";
 		};
+		BBB84B0B248D23BA004A7C76 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BBB84B0C248D23F6004A7C76 /* FormValidation.swift */,
+				BBB84B0E248D23F6004A7C76 /* Rules */,
+				BBB84B0D248D23F6004A7C76 /* Validation.swift */,
+				BBB84B14248D23F6004A7C76 /* Rule.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		BBB84B0E248D23F6004A7C76 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				BBB84B0F248D23F6004A7C76 /* RuleContainsNumber.swift */,
+				BBB84B10248D23F6004A7C76 /* RuleContainSpecialChars.swift */,
+				BBB84B11248D23F6004A7C76 /* RuleLength.swift */,
+				BBB84B12248D23F6004A7C76 /* RuleRequired.swift */,
+				BBB84B13248D23F6004A7C76 /* RuleEmail.swift */,
+				BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		E4CCC2E07E84BA62BDDDD8D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1BF652DD65090FC8F3ADD /* Pods-RevoValidation.debug.xcconfig */,
+				805C1B35127BE10067098EF2 /* Pods-RevoValidation.release.xcconfig */,
+				5C6136D1DBFB9B4C082876BA /* Pods-RevoValidationTests.debug.xcconfig */,
+				8383502DEDFB2244E5F173A4 /* Pods-RevoValidationTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBB84B05248D23B3004A7C76 /* Build configuration list for PBXNativeTarget "RevoValidation" */;
 			buildPhases = (
+				B61CDFA6768C07357620BA96 /* [CP] Check Pods Manifest.lock */,
 				BBB84AE2248D23B0004A7C76 /* Sources */,
 				BBB84AE3248D23B0004A7C76 /* Frameworks */,
 				BBB84AE4248D23B0004A7C76 /* Resources */,
+				B848861468564327C7B4D31A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBB84B08248D23B3004A7C76 /* Build configuration list for PBXNativeTarget "RevoValidationTests" */;
 			buildPhases = (
+				27C95C99B7FF593EBAF12D03 /* [CP] Check Pods Manifest.lock */,
 				BBB84AF8248D23B3004A7C76 /* Sources */,
 				BBB84AF9248D23B3004A7C76 /* Frameworks */,
 				BBB84AFA248D23B3004A7C76 /* Resources */,
@@ -195,6 +273,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27C95C99B7FF593EBAF12D03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RevoValidationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B61CDFA6768C07357620BA96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RevoValidation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B848861468564327C7B4D31A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RevoValidation/Pods-RevoValidation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RevoValidation/Pods-RevoValidation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RevoValidation/Pods-RevoValidation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BBB84AE2248D23B0004A7C76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,7 +344,16 @@
 			files = (
 				BBB84AEE248D23B0004A7C76 /* ViewController.swift in Sources */,
 				BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */,
+				BBB84B15248D23F6004A7C76 /* FormValidation.swift in Sources */,
+				BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */,
+				BBB84B16248D23F6004A7C76 /* Validation.swift in Sources */,
 				BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */,
+				BBB84B1A248D23F6004A7C76 /* RuleRequired.swift in Sources */,
+				BBB84B19248D23F6004A7C76 /* RuleLength.swift in Sources */,
+				BBB84B18248D23F6004A7C76 /* RuleContainSpecialChars.swift in Sources */,
+				BBB84B1B248D23F6004A7C76 /* RuleEmail.swift in Sources */,
+				BBB84B1C248D23F6004A7C76 /* Rule.swift in Sources */,
+				BBB84B17248D23F6004A7C76 /* RuleContainsNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +511,7 @@
 		};
 		BBB84B06248D23B3004A7C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E1BF652DD65090FC8F3ADD /* Pods-RevoValidation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +530,7 @@
 		};
 		BBB84B07248D23B3004A7C76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 805C1B35127BE10067098EF2 /* Pods-RevoValidation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +549,7 @@
 		};
 		BBB84B09248D23B3004A7C76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C6136D1DBFB9B4C082876BA /* Pods-RevoValidationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +572,7 @@
 		};
 		BBB84B0A248D23B3004A7C76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8383502DEDFB2244E5F173A4 /* Pods-RevoValidationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
