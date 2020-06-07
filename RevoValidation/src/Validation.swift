@@ -1,27 +1,39 @@
 import UIKit
 import RevoFoundation
 
-class Validation {
+public class Validation {
  
     let field:UITextField
-    let errorsLabel:UILabel?
+    var errorsLabel:UILabel?
     
     let rules:[Rule]
     var failed:[Rule] = []
+    var okText = ""
     
-    init(field:UITextField, rules:[Rule], errorsLabel:UILabel? = nil){
+    public init(field:UITextField, rules:[Rule]){
         self.field = field
         self.rules = rules
-        self.errorsLabel = errorsLabel
         addLiveValidation()
     }
     
+    public func displayErrorsAt(_ label:UILabel?) -> Validation {
+        errorsLabel = label
+        errorsLabel?.text = ""
+        return self
+    }
+    
+    public func withOkText(_ text:String) -> Validation{
+        okText = text
+        return self
+    }
+    
     @discardableResult
-    @objc func validate() -> Bool {
+    @objc public func validate() -> Bool {
         failed = rules.reject {
             $0.isValid(field.text ?? "")
         }
         errorsLabel?.text = failed.map { $0.errorMessage }.implode(" | ")
+        if failed.count == 0 { errorsLabel?.text = okText }
         return failed.count == 0
     }
     

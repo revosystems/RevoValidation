@@ -1,11 +1,13 @@
 import Foundation
 
-class Rule {
+public class Rule {
     
     var errors:[String] = []
     var errorMessage:String { "" }
     
-    func isValid(_ text:String) -> Bool {
+    public init() { }
+    
+    public func isValid(_ text:String) -> Bool {
         return true
     }
 }

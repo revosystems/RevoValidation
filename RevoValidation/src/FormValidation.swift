@@ -1,14 +1,22 @@
 import UIKit
 
-struct FormValidation {
+public struct FormValidation {
     
     var fields:[Validation] = []
     
-    mutating func addValidation(for textField:UITextField, rules:[Rule], errorsLabel:UILabel? = nil){
-        fields.append(Validation(field: textField, rules: rules, errorsLabel:errorsLabel))
+    public init(){}
+    
+    public mutating func addValidation(_ validation:Validation){
+        fields.append(validation)
     }
     
-    func validate(){
+    public mutating func addValidation(for field:UITextField, rules:[Rule], errorsLabel:UILabel? = nil){
+        fields.append(
+            Validation(field: field, rules: rules).displayErrorsAt(errorsLabel)
+        )
+    }
+    
+    public func validate(){
         fields.each { $0.validate() }
     }
 }
