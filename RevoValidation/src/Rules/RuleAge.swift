@@ -4,8 +4,10 @@ import RevoFoundation
 public class RuleAge : Rule {
  
     var age = 18
+    lazy var now:Date = { Date() }()
+    
     override var errorMessage: String{
-        "Age required: \(length) yo"
+        "Age required: \(age) yo"
     }
     
     public init(_ age:Int = 18){
@@ -13,7 +15,7 @@ public class RuleAge : Rule {
     }
     
     override public func isValid(_ text:String) -> Bool {
-        guard let dateString = text, let birthDate = Date(string:dateString) else { return false }
+        guard let birthDate = Date(string:text) else { return false }
         
         return birthDate <= now.subtract(years: age)!
     }
