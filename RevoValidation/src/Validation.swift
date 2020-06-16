@@ -5,20 +5,56 @@ public protocol ValidationDelegate {
     func onFieldValidated(_ validation:Validation)
 }
 
+public struct Rules : ExpressibleByStringLiteral {
+    let rules:[Rule]
+    
+    public init(stringLiteral value: String) {
+        self.rules = value.components(separatedBy: "|").compactMap { (rule:String) in
+            switch rule.lowercased() {
+            case "required"             : return RuleRequired()
+            case "email"                : return RuleEmail()
+            case "containsSpecialChar"  : return RuleContainSpecialChars()
+            case "containsNumber"       : return RuleContainsNumber()
+            default                     : return nil
+            }
+        }
+    }
+    
+    init(_ rules:[Rule] = []){
+        self.rules = rules
+    }
+    
+    public func validate(_ field:UITextField) -> Rules {
+        Rules(rules.reject {
+            $0.isValid(field.text ?? "")
+        })
+    }
+    
+    public var errorMessage:String {
+        rules.map { $0.errorMessage }.implode(" | ")
+    }
+    
+    public var count:Int { rules.count }
+}
+
 public class Validation {
  
     let field:UITextField
     var errorsLabel:UILabel?
     
-    let rules:[Rule]
-    var failed:[Rule] = []
+    let rules:Rules
+    var failed:Rules = Rules()
     var okText = ""
     var delegate:ValidationDelegate?
     
-    public init(field:UITextField, rules:[Rule]){
+    public init(field:UITextField, rules:Rules){
         self.field = field
         self.rules = rules
         addLiveValidation()
+    }
+    
+    convenience public init(field:UITextField, rules:[Rule]){
+        self.init(field:field, rules: Rules(rules))        
     }
     
     public func displayErrorsAt(_ label:UILabel?) -> Validation {
@@ -39,18 +75,12 @@ public class Validation {
     
     @discardableResult
     public func validate(showErrors:Bool = true) -> Bool {
-        failed = rules.reject {
-            $0.isValid(field.text ?? "")
-        }
+        failed = rules.validate(field)
         if showErrors {
-            errorsLabel?.text = failed.map { $0.errorMessage }.implode(" | ")
+            errorsLabel?.text = failed.errorMessage
             if failed.count == 0 { errorsLabel?.text = okText }
         }
         return failed.count == 0
-    }
-    
-    var errors: [String] {
-        rules.flatMap { $0.errors }
     }
     
     func addLiveValidation(){
