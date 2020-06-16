@@ -25,6 +25,12 @@ public class Validation {
         self.init(field:field, rules: Rules(rules))
     }
     
+    convenience public init(_ field:UITextField, _ rules:Rules, _ displayErrorsAt: UILabel? = nil){
+        self.init(field:field, rules: rules)
+        self.displayErrorsAt(displayErrorsAt)
+    }
+    
+    @discardableResult
     public func displayErrorsAt(_ label:UILabel?) -> Validation {
         errorsLabel = label
         errorsLabel?.text = ""
