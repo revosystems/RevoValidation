@@ -5,38 +5,6 @@ public protocol ValidationDelegate {
     func onFieldValidated(_ validation:Validation)
 }
 
-public struct Rules : ExpressibleByStringLiteral {
-    let rules:[Rule]
-    
-    public init(stringLiteral value: String) {
-        self.rules = value.components(separatedBy: "|").compactMap { (rule:String) in
-            switch rule.lowercased() {
-            case "required"             : return RuleRequired()
-            case "email"                : return RuleEmail()
-            case "containsSpecialChar"  : return RuleContainSpecialChars()
-            case "containsNumber"       : return RuleContainsNumber()
-            default                     : return nil
-            }
-        }
-    }
-    
-    init(_ rules:[Rule] = []){
-        self.rules = rules
-    }
-    
-    public func validate(_ field:UITextField) -> Rules {
-        Rules(rules.reject {
-            $0.isValid(field.text ?? "")
-        })
-    }
-    
-    public var errorMessage:String {
-        rules.map { $0.errorMessage }.implode(" | ")
-    }
-    
-    public var count:Int { rules.count }
-}
-
 public class Validation {
  
     let field:UITextField
@@ -54,7 +22,7 @@ public class Validation {
     }
     
     convenience public init(field:UITextField, rules:[Rule]){
-        self.init(field:field, rules: Rules(rules))        
+        self.init(field:field, rules: Rules(rules))
     }
     
     public func displayErrorsAt(_ label:UILabel?) -> Validation {

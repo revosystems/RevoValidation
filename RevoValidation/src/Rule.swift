@@ -1,5 +1,6 @@
 import Foundation
 
+
 public class Rule {
     
     var errors:[String] = []
