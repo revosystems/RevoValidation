@@ -16,7 +16,12 @@ public struct FormValidation {
         )
     }
     
-    public func validate(){
-        fields.each { $0.validate() }
+    public func validate() -> Bool{
+        !fields.map { $0.validate(showErrors:false) }
+               .contains(false)
+    }
+    
+    public func setDelegate(_ delegate:ValidationDelegate){
+        fields.each { $0.delegate = delegate }
     }
 }

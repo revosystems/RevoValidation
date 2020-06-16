@@ -1,6 +1,10 @@
 import UIKit
 import RevoFoundation
 
+public protocol ValidationDelegate {
+    func onFieldValidated(_ validation:Validation)
+}
+
 public class Validation {
  
     let field:UITextField
@@ -9,6 +13,7 @@ public class Validation {
     let rules:[Rule]
     var failed:[Rule] = []
     var okText = ""
+    var delegate:ValidationDelegate?
     
     public init(field:UITextField, rules:[Rule]){
         self.field = field
@@ -27,13 +32,20 @@ public class Validation {
         return self
     }
     
+    @objc func inputChanged(){
+        validate()
+        delegate?.onFieldValidated(self)
+    }
+    
     @discardableResult
-    @objc public func validate() -> Bool {
+    public func validate(showErrors:Bool = true) -> Bool {
         failed = rules.reject {
             $0.isValid(field.text ?? "")
         }
-        errorsLabel?.text = failed.map { $0.errorMessage }.implode(" | ")
-        if failed.count == 0 { errorsLabel?.text = okText }
+        if showErrors {
+            errorsLabel?.text = failed.map { $0.errorMessage }.implode(" | ")
+            if failed.count == 0 { errorsLabel?.text = okText }
+        }
         return failed.count == 0
     }
     
@@ -42,7 +54,7 @@ public class Validation {
     }
     
     func addLiveValidation(){
-        field.addTarget(self, action: #selector(validate), for: .editingChanged)
+        field.addTarget(self, action: #selector(inputChanged), for: .editingChanged)
     }
     
 }
