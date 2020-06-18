@@ -1,10 +1,11 @@
 import Foundation
+import RevoFoundation
 
 public class RuleLenght : Rule {
  
     var length = 6
     override var errorMessage: String{
-        "Needs to be at least \(length)"
+        str(NSLocalizedString("Needs to be at least %d", comment: ""), length)
     }
     
     public init(_ length:Int = 6){

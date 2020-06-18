@@ -31,7 +31,7 @@ public struct Rules : ExpressibleByStringLiteral {
     }
     
     public var errorMessage:String {
-        rules.map { $0.errorMessage }.implode(" | ")
+        rules.map { $0.errorMessage }.map { NSLocalizedString($0, comment: $0) } .implode(" | ")
     }
     
     public var count:Int { rules.count }

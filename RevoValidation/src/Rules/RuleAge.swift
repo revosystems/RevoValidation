@@ -6,8 +6,8 @@ public class RuleAge : Rule {
     var age = 18
     lazy var now:Date = { Date() }()
     
-    override var errorMessage: String{
-        "Age required: \(age) yo"
+    override var errorMessage: String{        
+        str(NSLocalizedString("Age required: %d yo", comment: ""), age)
     }
     
     public init(_ age:Int = 18){
