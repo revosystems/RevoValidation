@@ -51,6 +51,7 @@ public class Validation {
     public func validate(showErrors:Bool = true) -> Bool {
         failed = rules.validate(field)
         if showErrors {
+            field.rightViewMode = failed.count == 0 ? .never : .always
             errorsLabel?.text = failed.errorMessage
             if failed.count == 0 { errorsLabel?.text = okText }
         }
