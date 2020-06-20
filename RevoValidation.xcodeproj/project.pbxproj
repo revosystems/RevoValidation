@@ -10,6 +10,7 @@
 		491DC17C707D4A3F5EE10C17 /* Pods_RevoValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DCDF4D0A7FC02720C5296F /* Pods_RevoValidation.framework */; };
 		6E1A2B9BCEC658AAE060A6F8 /* Pods_RevoValidationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36822AE8D9AA7823F26B72EA /* Pods_RevoValidationTests.framework */; };
 		8D7289D12497D090007FE172 /* RuleAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7289D02497D090007FE172 /* RuleAge.swift */; };
+		BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */; };
 		BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */; };
 		BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AEB248D23B0004A7C76 /* SceneDelegate.swift */; };
 		BBB84AEE248D23B0004A7C76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AED248D23B0004A7C76 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		805C1B35127BE10067098EF2 /* Pods-RevoValidation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidation.release.xcconfig"; path = "Target Support Files/Pods-RevoValidation/Pods-RevoValidation.release.xcconfig"; sourceTree = "<group>"; };
 		8383502DEDFB2244E5F173A4 /* Pods-RevoValidationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidationTests.release.xcconfig"; path = "Target Support Files/Pods-RevoValidationTests/Pods-RevoValidationTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D7289D02497D090007FE172 /* RuleAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleAge.swift; sourceTree = "<group>"; };
+		BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleConfirmPassword.swift; sourceTree = "<group>"; };
 		BBB84AE6248D23B0004A7C76 /* RevoValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevoValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB84AEB248D23B0004A7C76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				BBB84B13248D23F6004A7C76 /* RuleEmail.swift */,
 				BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */,
 				8D7289D02497D090007FE172 /* RuleAge.swift */,
+				BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */,
 				BBB84B15248D23F6004A7C76 /* FormValidation.swift in Sources */,
 				BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */,
+				BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */,
 				BBB84B16248D23F6004A7C76 /* Validation.swift in Sources */,
 				BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */,
 				BBB84B1A248D23F6004A7C76 /* RuleRequired.swift in Sources */,
