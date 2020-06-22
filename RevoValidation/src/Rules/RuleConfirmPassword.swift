@@ -1,6 +1,6 @@
 import UIKit
 
-public class RuleConfirmAge : Rule {
+public class RuleConfirmPassword : Rule {
  
     let passwordField:UITextField
     
