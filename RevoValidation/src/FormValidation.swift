@@ -16,8 +16,8 @@ public struct FormValidation {
         )
     }
     
-    public func validate() -> Bool{
-        !fields.map { $0.validate(showErrors:false) }
+    public func validate(showErrors:Bool = false) -> Bool{
+        !fields.map { $0.validate(showErrors: showErrors) }
                .contains(false)
     }
     
