@@ -25,13 +25,13 @@ public struct Rules : ExpressibleByStringLiteral {
     }
     
     public func validate(_ field:UITextField) -> Rules {
-        Rules(rules.reject {
-            if (field.text == nil || field.text == "" && !($0 is RuleRequired)){
-                return true
-            }
-            return $0.isValid(field.text ?? "")
-        })
-    }
+        Rules(rules.reject {
+            if (field.text == nil || field.text == "" && !($0 is RuleRequired)){
+                return true
+            }
+            return $0.isValid(field.text ?? "")
+        })
+    }
     
     public var errorMessage:String {
         rules.map { $0.errorMessage }.map { NSLocalizedString($0, comment: $0) } .implode(" | ")
