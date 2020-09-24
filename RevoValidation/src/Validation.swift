@@ -15,6 +15,9 @@ public class Validation {
     var okText = ""
     var delegate:ValidationDelegate?
     
+    var defaultColor:UIColor?
+    var okTextColor:UIColor?
+    
     public init(field:UITextField, rules:Rules){
         self.field = field
         self.rules = rules
@@ -37,8 +40,9 @@ public class Validation {
         return self
     }
     
-    public func withOkText(_ text:String) -> Validation{
+    public func withOkText(_ text:String, _ color:UIColor? = nil) -> Validation{
         okText = text
+        okTextColor = color
         return self
     }
     
@@ -51,11 +55,24 @@ public class Validation {
     public func validate(showErrors:Bool = true) -> Bool {
         failed = rules.validate(field)
         if showErrors {
-            field.rightViewMode = failed.count == 0 ? .never : .always
-            errorsLabel?.text = failed.errorMessage
-            if failed.count == 0 { errorsLabel?.text = okText }
+            showErrorslabel()
         }
         return failed.count == 0
+    }
+    
+    func showErrorslabel(){
+        field.rightViewMode = failed.count == 0 ? .never : .always
+        errorsLabel?.text = failed.errorMessage
+        showDefaultColor()
+        if failed.count == 0 {
+            errorsLabel?.text = okText
+            if okTextColor != nil { errorsLabel?.textColor = okTextColor }
+        }
+    }
+    
+    func showDefaultColor() {
+        if defaultColor == nil { defaultColor = errorsLabel?.textColor }
+        errorsLabel?.textColor = defaultColor
     }
     
     func addLiveValidation(){
