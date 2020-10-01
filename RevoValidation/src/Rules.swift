@@ -6,17 +6,32 @@ public struct Rules : ExpressibleByStringLiteral {
     
     public init(stringLiteral value: String) {
         self.rules = value.explode("|").compactMap {
-            let params = $0.explode(":")
-            switch params.first! {
-            case "required"             : return RuleRequired()
-            case "email"                : return RuleEmail()
-            case "containsSpecialChars" : return RuleContainSpecialChars()
-            case "containsNumber"       : return RuleContainsNumber()
-            case "numeric"              : return RuleNumeric()
-            case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
-            case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
-            default                     : return nil
+            if !$0.contains("+") {
+                let params = $0.explode(":")
+                switch params.first! {
+                case "required"             : return RuleRequired()
+                case "email"                : return RuleEmail()
+                case "containsSpecialChars" : return RuleContainSpecialChars()
+                case "containsNumber"       : return RuleContainsNumber()
+                case "numeric"              : return RuleNumeric()
+                case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
+                case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
+                default                     : return nil
+                }
             }
+            return RuleCombined($0.explode("+").compactMap {
+                let params = $0.explode(":")
+                switch params.first! {
+                case "required"             : return RuleRequired()
+                case "email"                : return RuleEmail()
+                case "containsSpecialChars" : return RuleContainSpecialChars()
+                case "containsNumber"       : return RuleContainsNumber()
+                case "numeric"              : return RuleNumeric()
+                case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
+                case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
+                default                     : return nil
+                }
+            }, $0)
         }
     }
     
