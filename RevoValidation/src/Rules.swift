@@ -52,5 +52,11 @@ public struct Rules : ExpressibleByStringLiteral {
         rules.map { $0.errorMessage }.map { NSLocalizedString($0, comment: $0) } .implode(" | ")
     }
     
+    public var showFirstErrorMessage:String {
+        print(rules)
+        guard rules.isEmpty == false else { return "" }
+        return NSLocalizedString(rules[0].errorMessage, comment: rules[0].errorMessage)
+    }
+    
     public var count:Int { rules.count }
 }
