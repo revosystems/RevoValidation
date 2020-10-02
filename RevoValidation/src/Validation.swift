@@ -70,7 +70,7 @@ public class Validation {
     func showErrorslabel(){
         field.rightViewMode = failed.count == 0 ? .never : .always
         errorsLabel?.text = (showFirstOneFlag ? failed.showFirstErrorMessage : failed.errorMessage)
-        showDefaultColor()
+        if okTextColor != nil { showDefaultColor() }
         if failed.count == 0 {
             errorsLabel?.text = okText
             if okTextColor != nil { errorsLabel?.textColor = okTextColor }
