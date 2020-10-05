@@ -6,32 +6,22 @@ public struct Rules : ExpressibleByStringLiteral {
     
     public init(stringLiteral value: String) {
         self.rules = value.explode("|").compactMap {
-            if !$0.contains("+") {
-                let params = $0.explode(":")
-                switch params.first! {
-                case "required"             : return RuleRequired()
-                case "email"                : return RuleEmail()
-                case "containsSpecialChars" : return RuleContainSpecialChars()
-                case "containsNumber"       : return RuleContainsNumber()
-                case "numeric"              : return RuleNumeric()
-                case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
-                case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
-                default                     : return nil
-                }
-            }
-            return RuleCombined($0.explode("+").compactMap {
-                let params = $0.explode(":")
-                switch params.first! {
-                case "required"             : return RuleRequired()
-                case "email"                : return RuleEmail()
-                case "containsSpecialChars" : return RuleContainSpecialChars()
-                case "containsNumber"       : return RuleContainsNumber()
-                case "numeric"              : return RuleNumeric()
-                case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
-                case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
-                default                     : return nil
-                }
-            }, $0)
+            if !$0.contains("+") { return Rules.getRule($0) }
+            return RuleCombined($0.explode("+").compactMap { return Rules.getRule($0) }, $0)
+        }
+    }
+    
+    static func getRule(_ rule:String) -> Rule? {
+        let params = rule.explode(":")
+        switch params.first! {
+        case "required"             : return RuleRequired()
+        case "email"                : return RuleEmail()
+        case "containsSpecialChars" : return RuleContainSpecialChars()
+        case "containsNumber"       : return RuleContainsNumber()
+        case "numeric"              : return RuleNumeric()
+        case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
+        case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
+        default                     : return nil
         }
     }
     
@@ -52,7 +42,7 @@ public struct Rules : ExpressibleByStringLiteral {
         rules.map { $0.errorMessage }.map { NSLocalizedString($0, comment: $0) } .implode(" | ")
     }
     
-    public var shouldShowFirstErrorMessage:String {
+    public var firstErrorMessage:String {
         guard rules.isEmpty == false else { return "" }
         return NSLocalizedString(rules[0].errorMessage, comment: rules[0].errorMessage)
     }

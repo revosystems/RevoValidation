@@ -3,17 +3,17 @@ import RevoFoundation
 
 public class RuleCombined : Rule {
  
-    var titleTraduction:String
-    var combinedRules:[Rule]
+    var title:String
+    var rules:[Rule]
     
-    override var errorMessage: String{ titleTraduction }
+    override var errorMessage: String{ title }
     
     public init(_ rules:[Rule], _ title:String){
-        self.combinedRules = rules
-        self.titleTraduction = title
+        self.rules = rules
+        self.title = title
     }
     
     override public func isValid(_ text:String) -> Bool {
-        combinedRules.contains{ $0.isValid(text) }
+        rules.contains{ $0.isValid(text) }
     }
 }
