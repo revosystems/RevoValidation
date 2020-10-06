@@ -6,12 +6,12 @@ public struct Rules : ExpressibleByStringLiteral {
     
     public init(stringLiteral value: String) {
         self.rules = value.explode("|").compactMap {
-            if !$0.contains("+") { return Rules.getRule($0) }
-            return RuleCombined($0.explode("+").compactMap { return Rules.getRule($0) }, $0)
+            if !$0.contains("+") { return Rules.makeRule($0) }
+            return RuleCombined($0.explode("+").compactMap { return Rules.makeRule($0) }, $0)
         }
     }
     
-    static func getRule(_ rule:String) -> Rule? {
+    static func makeRule(_ rule:String) -> Rule? {
         let params = rule.explode(":")
         switch params.first! {
         case "required"             : return RuleRequired()
