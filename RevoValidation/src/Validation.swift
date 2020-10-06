@@ -15,6 +15,8 @@ public class Validation {
     var okText = ""
     var delegate:ValidationDelegate?
     
+    var shouldShowFirstOne:Bool = false
+    
     var defaultColor:UIColor?
     var okTextColor:UIColor?
     
@@ -40,9 +42,14 @@ public class Validation {
         return self
     }
     
-    public func withOkText(_ text:String, _ color:UIColor? = nil) -> Validation{
+    public func withOkText(_ text:String, _ color:UIColor? = nil) -> Validation {
         okText = text
         okTextColor = color
+        return self
+    }
+    
+    public func shouldShowFirstOne(_ shouldShowFirstOne:Bool = true) -> Validation {
+        self.shouldShowFirstOne = shouldShowFirstOne
         return self
     }
     
@@ -62,8 +69,9 @@ public class Validation {
     
     func showErrorslabel(){
         field.rightViewMode = failed.count == 0 ? .never : .always
-        errorsLabel?.text = failed.errorMessage
-        showDefaultColor()
+        errorsLabel?.text = (shouldShowFirstOne ? failed.firstErrorMessage : failed.errorMessage)
+        if okTextColor != nil { showDefaultColor() }
+//        showDefaultColor()
         if failed.count == 0 {
             errorsLabel?.text = okText
             if okTextColor != nil { errorsLabel?.textColor = okTextColor }
@@ -72,6 +80,7 @@ public class Validation {
     
     func showDefaultColor() {
         if defaultColor == nil { defaultColor = errorsLabel?.textColor }
+//        print("enter showdefaultcolor")
         errorsLabel?.textColor = defaultColor
     }
     
