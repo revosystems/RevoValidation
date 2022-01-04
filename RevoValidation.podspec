@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RevoValidation"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "Validation package."
 
   # This description is used to generate tags and improve search results.
@@ -81,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/revosystems/revovalidation.git", :tag => "0.0.6" }
+  spec.source       = { :git => "https://github.com/revosystems/revovalidation.git", :tag => "0.0.7" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
