@@ -7,10 +7,10 @@ public protocol ValidationDelegate {
 
 public class Validation {
  
-    let field:UITextField
+    public let field:UITextField
     var errorsLabel:UILabel?
     
-    let rules:Rules
+    var rules:Rules
     var failed:Rules = Rules()
     var okText = ""
     var delegate:ValidationDelegate?
@@ -86,6 +86,11 @@ public class Validation {
     
     func addLiveValidation(){
         field.addTarget(self, action: #selector(inputChanged), for: .editingChanged)
+    }
+
+    public func modifyRulesAndValidate(_ newRules : Rules){
+        rules = newRules
+        validate()
     }
     
 }

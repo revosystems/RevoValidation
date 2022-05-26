@@ -15,6 +15,11 @@ public struct FormValidation {
             Validation(field: field, rules: rules).displayErrorsAt(errorsLabel)
         )
     }
+
+    public mutating func modifyRulesAndValidate(for field:UITextField, rules:Rules){
+        let validationField = fields.first { validation in validation.field == field}
+        validationField?.modifyRulesAndValidate(rules)
+    }
     
     public func validate(showErrors:Bool = false) -> Bool{
         !fields.map { $0.validate(showErrors: showErrors) }
