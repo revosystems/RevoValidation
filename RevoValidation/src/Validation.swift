@@ -88,9 +88,11 @@ public class Validation {
         field.addTarget(self, action: #selector(inputChanged), for: .editingChanged)
     }
 
-    public func modifyRulesAndValidate(_ newRules : Rules){
-        rules = newRules
-        validate()
+    public func update(rules:Rules, validate:Bool = true){
+        self.rules = rules
+        if (validate) {
+            self.validate()
+        }
     }
     
 }
