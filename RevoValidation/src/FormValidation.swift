@@ -16,9 +16,9 @@ public struct FormValidation {
         )
     }
 
-    public mutating func modifyRulesAndValidate(for field:UITextField, rules:Rules){
+    public mutating func update(rules:Rules, for field:UITextField, validate:Bool = true){
         let validationField = fields.first { validation in validation.field == field}
-        validationField?.update(rules: rules)
+        validationField?.update(rules: rules, validate: validate)
     }
     
     public func validate(showErrors:Bool = false) -> Bool{
