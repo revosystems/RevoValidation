@@ -12,6 +12,7 @@
 		6C22F238182AB618B3468942 /* Pods_RevoValidationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313A029B2213DD326D7C7196 /* Pods_RevoValidationTests.framework */; };
 		8D7289D12497D090007FE172 /* RuleAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7289D02497D090007FE172 /* RuleAge.swift */; };
 		8D89C2D825126F90005537F1 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89C2D725126F90005537F1 /* Rules.swift */; };
+		BB09FD7728B90DC200DBD8A0 /* RuleDni.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB09FD7628B90DC200DBD8A0 /* RuleDni.swift */; };
 		BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */; };
 		BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */; };
 		BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AEB248D23B0004A7C76 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 		BBB84B1B248D23F6004A7C76 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B13248D23F6004A7C76 /* RuleEmail.swift */; };
 		BBB84B1C248D23F6004A7C76 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B14248D23F6004A7C76 /* Rule.swift */; };
 		BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */; };
+		BBE51DC428B90E2D00E4AFDA /* RuleDNITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		8D89C2D725126F90005537F1 /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		9985FDFA2146CFC0ABE31997 /* Pods-RevoValidationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidationTests.release.xcconfig"; path = "Target Support Files/Pods-RevoValidationTests/Pods-RevoValidationTests.release.xcconfig"; sourceTree = "<group>"; };
 		9EE5D610528889C0D67062E8 /* Pods_RevoValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevoValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB09FD7628B90DC200DBD8A0 /* RuleDni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDni.swift; sourceTree = "<group>"; };
 		BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleConfirmPassword.swift; sourceTree = "<group>"; };
 		BBB84AE6248D23B0004A7C76 /* RevoValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevoValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		BBB84B13248D23F6004A7C76 /* RuleEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleEmail.swift; sourceTree = "<group>"; };
 		BBB84B14248D23F6004A7C76 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNumeric.swift; sourceTree = "<group>"; };
+		BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDNITest.swift; sourceTree = "<group>"; };
 		F82EF8AB48762E9058C4022E /* Pods-RevoValidation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidation.debug.xcconfig"; path = "Target Support Files/Pods-RevoValidation/Pods-RevoValidation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +138,7 @@
 			children = (
 				BBB84B00248D23B3004A7C76 /* RevoValidationTests.swift */,
 				BBB84B02248D23B3004A7C76 /* Info.plist */,
+				BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */,
 			);
 			path = RevoValidationTests;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				8D7289D02497D090007FE172 /* RuleAge.swift */,
 				BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */,
 				43F5E0E995082B9987FDA64E /* RuleCombined.swift */,
+				BB09FD7628B90DC200DBD8A0 /* RuleDni.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -234,7 +240,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "Jordi Puigdellívol";
 				TargetAttributes = {
 					BBB84AE5248D23B0004A7C76 = {
@@ -359,6 +365,7 @@
 				BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */,
 				BBB84B15248D23F6004A7C76 /* FormValidation.swift in Sources */,
 				BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */,
+				BB09FD7728B90DC200DBD8A0 /* RuleDni.swift in Sources */,
 				BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */,
 				BBB84B16248D23F6004A7C76 /* Validation.swift in Sources */,
 				BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */,
@@ -378,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB84B01248D23B3004A7C76 /* RevoValidationTests.swift in Sources */,
+				BBE51DC428B90E2D00E4AFDA /* RuleDNITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +445,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -497,6 +506,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
