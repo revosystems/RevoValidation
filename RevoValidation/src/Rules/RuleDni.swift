@@ -28,6 +28,10 @@ class RuleDni : Rule {
         }
     }
     
+    override var errorMessage: String {
+        "Invalid NIF/NIE/CIF"        
+    }
+    
     override public func isValid(_ text:String) -> Bool {
         do {
             if text.startsWith(CIF.initialLetters) {

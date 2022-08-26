@@ -21,6 +21,7 @@ public struct Rules : ExpressibleByStringLiteral {
         case "numeric"              : return RuleNumeric()
         case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
         case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
+        case "dni"                  : return RuleDni()
         default                     : return nil
         }
     }
