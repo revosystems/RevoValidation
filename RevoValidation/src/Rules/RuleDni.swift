@@ -1,6 +1,6 @@
 import RevoFoundation
 
-class RuleDni : Rule {
+public class RuleDni : Rule {
     
     enum DNIError : Error, CustomStringConvertible {
         case nonNumeric

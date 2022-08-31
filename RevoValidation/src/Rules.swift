@@ -22,11 +22,12 @@ public struct Rules : ExpressibleByStringLiteral {
         case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
         case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
         case "dni"                  : return RuleDni()
+        case "unique"               : return RuleUnique(existing: params.last?.explode(",") ?? [])
         default                     : return nil
         }
     }
     
-    init(_ rules:[Rule] = []){
+    public init(_ rules:[Rule] = []){
         self.rules = rules
     }
     
