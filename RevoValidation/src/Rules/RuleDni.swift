@@ -29,7 +29,7 @@ public class RuleDni : Rule {
     }
     
     override var errorMessage: String {
-        "Invalid NIF/NIE/CIF"        
+        "Invalid NIF/NIE/CIF"
     }
     
     override public func isValid(_ text:String) -> Bool {

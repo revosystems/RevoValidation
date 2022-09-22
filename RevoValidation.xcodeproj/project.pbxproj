@@ -31,6 +31,8 @@
 		BBB84B1C248D23F6004A7C76 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B14248D23F6004A7C76 /* Rule.swift */; };
 		BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */; };
 		BBE51DC428B90E2D00E4AFDA /* RuleDNITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */; };
+		EAFDCCD828DC71BD0038612F /* RuleUnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCCD728DC71BD0038612F /* RuleUnique.swift */; };
+		EAFDCCDA28DC73270038612F /* ValidationTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCCD928DC73270038612F /* ValidationTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		BBB84B14248D23F6004A7C76 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNumeric.swift; sourceTree = "<group>"; };
 		BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDNITest.swift; sourceTree = "<group>"; };
+		EAFDCCD728DC71BD0038612F /* RuleUnique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleUnique.swift; sourceTree = "<group>"; };
+		EAFDCCD928DC73270038612F /* ValidationTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTranslator.swift; sourceTree = "<group>"; };
 		F82EF8AB48762E9058C4022E /* Pods-RevoValidation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidation.debug.xcconfig"; path = "Target Support Files/Pods-RevoValidation/Pods-RevoValidation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,7 @@
 				BBB84B0E248D23F6004A7C76 /* Rules */,
 				BBB84B0D248D23F6004A7C76 /* Validation.swift */,
 				BBB84B14248D23F6004A7C76 /* Rule.swift */,
+				EAFDCCD928DC73270038612F /* ValidationTranslator.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 		BBB84B0E248D23F6004A7C76 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				EAFDCCD728DC71BD0038612F /* RuleUnique.swift */,
 				BBB84B0F248D23F6004A7C76 /* RuleContainsNumber.swift */,
 				BBB84B10248D23F6004A7C76 /* RuleContainSpecialChars.swift */,
 				BBB84B11248D23F6004A7C76 /* RuleLength.swift */,
@@ -364,6 +370,8 @@
 				8D7289D12497D090007FE172 /* RuleAge.swift in Sources */,
 				BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */,
 				BBB84B15248D23F6004A7C76 /* FormValidation.swift in Sources */,
+				EAFDCCDA28DC73270038612F /* ValidationTranslator.swift in Sources */,
+				EAFDCCD828DC71BD0038612F /* RuleUnique.swift in Sources */,
 				BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */,
 				BB09FD7728B90DC200DBD8A0 /* RuleDni.swift in Sources */,
 				BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */,

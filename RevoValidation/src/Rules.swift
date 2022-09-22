@@ -4,6 +4,9 @@ import RevoFoundation
 public struct Rules : ExpressibleByStringLiteral {
     let rules:[Rule]
     
+    @Inject
+    var translator:ValidationTranslator?
+    
     public init(stringLiteral value: String) {
         self.rules = value.explode("|").compactMap {
             if !$0.contains("+") { return Rules.makeRule($0) }
@@ -41,12 +44,16 @@ public struct Rules : ExpressibleByStringLiteral {
     }
     
     public var errorMessage:String {
-        rules.map { $0.errorMessage }.map { NSLocalizedString($0, comment: $0) } .implode(" | ")
+        rules.map { $0.errorMessage }.map { translate(error:$0) } .implode(" | ")
+    }
+    
+    public func translate(error:String) -> String {
+        translator?.translate(key:error) ?? NSLocalizedString(error, comment: error)
     }
     
     public var firstErrorMessage:String {
-        guard rules.isEmpty == false else { return "" }
-        return NSLocalizedString(rules[0].errorMessage, comment: rules[0].errorMessage)
+        guard let rule = rules.first else { return "" }
+        return rule.errorMessage
     }
     
     public var count:Int { rules.count }
