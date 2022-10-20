@@ -78,6 +78,17 @@ public class Validation {
         }
     }
     
+    func addRightView(icon:String = "exclamationmark.circle" , color:UIColor = .red, size:CGFloat = 24){
+        let container   = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        let iconView    = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height: size))
+        iconView.image  = UIImage(systemName: icon)
+        iconView.contentMode = .center
+        iconView.tintColor   = color
+        container.addSubview(iconView)
+        
+        field.rightView            = container
+    }
+    
     func showDefaultColor() {
         if defaultColor == nil { defaultColor = errorsLabel?.textColor }
 //        print("enter showdefaultcolor")
