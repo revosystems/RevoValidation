@@ -23,6 +23,13 @@ public struct FormValidation {
     }
     
     @discardableResult
+    public mutating func replace(validations:[Validation]) -> Self {
+        fields.removeAll()
+        validations.each { addValidation($0) }
+        return self
+    }
+    
+    @discardableResult
     public mutating func addValidation(for field:UITextField, rules:[Rule], errorsLabel:UILabel? = nil) -> Self{
         fields.append(
             Validation(field: field, rules: rules).displayErrorsAt(errorsLabel)

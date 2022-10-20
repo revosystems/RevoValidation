@@ -36,11 +36,28 @@ public struct Rules : ExpressibleByStringLiteral {
     
     public func validate(_ field:UITextField) -> Rules {
         Rules(rules.reject {
-            if (field.text == nil || field.text == "" && !($0 is RuleRequired)){
+            if skipsValidation(field: field, rule:$0) {
                 return true
             }
             return $0.isValid(field.text ?? "")
         })
+    }
+    
+    private func skipsValidation(field:UITextField, rule:Rule) -> Bool {
+        if (fieldsToCheckEvenWhenEmpty.contains {
+            type(of: rule) == $0 }
+        ) {
+            return false
+        }
+        
+        return field.text == nil || field.text == ""
+    }
+    
+    var fieldsToCheckEvenWhenEmpty: [Rule.Type] {
+        [
+            RuleRequired.self,
+            RuleRequiredIf.self
+        ]
     }
     
     public var errorMessage:String {

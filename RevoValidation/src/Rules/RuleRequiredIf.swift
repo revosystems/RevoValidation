@@ -1,11 +1,11 @@
 import UIKit
 
-class RuleRequiredIf : Rule {
-    override var errorMessage: String { "Required" }
+public class RuleRequiredIf : Rule {
+    override var errorMessage: String { "Required as other is present" }
     
     var other:UITextField
     
-    init(other:UITextField){
+    public init(other:UITextField){
         self.other = other
     }
     
