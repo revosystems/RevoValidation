@@ -118,6 +118,8 @@ public class RuleDni : Rule {
             "K",    //OLD
             "L",    //OLD
             "M",    //OLD
+            "J",
+            "V",
             //"X",    //Extranjeros => Se trata como NIE
         ]
         

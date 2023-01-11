@@ -56,6 +56,9 @@ class RuleDNITest: XCTestCase {
         XCTAssertTrue(RuleDni().isValid("Q2805800F"))   //Ayuntamiento fuenlabrada
         XCTAssertTrue(RuleDni().isValid("Q0811200E"))   //Ayuntamiento MANRESA
         
+        XCTAssertTrue(RuleDni().isValid("V09989153"))
+        XCTAssertTrue(RuleDni().isValid("J16720468"))
+        
     }
     
     func test_incorrect_cif_fails() {
