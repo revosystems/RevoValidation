@@ -119,7 +119,12 @@ public class RuleDni : Rule {
             "L",    //OLD
             "M",    //OLD
             "J",
-            "V",
+            "V",    //otros tipos no definidos
+            "N",    //entidades extranjeras
+            "S",    //organos adm estado y comunidades autonomas
+            "R",    //religiosas
+            "U",    //Uniones temporales de empresas
+            "W",    //establecimientos permanentes de entidades no residentes en españa
             //"X",    //Extranjeros => Se trata como NIE
         ]
         
