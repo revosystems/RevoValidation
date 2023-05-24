@@ -163,7 +163,7 @@ public class RuleDni : Rule {
         }
         
         func isSpecialCase() -> Bool {
-            ["P", "Q"].contains(String(cif.prefix(1)))
+            ["P", "Q", "R"].contains(String(cif.prefix(1)))
         }
         
         func validateSpecialCases(control:Int) throws {
