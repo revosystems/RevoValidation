@@ -53,8 +53,8 @@ class RuleDNITest: XCTestCase {
         XCTAssertTrue(RuleDni().isValid("A58818501"))
         XCTAssertTrue(RuleDni().isValid("B66353780"))  //Revo
         XCTAssertTrue(RuleDni().isValid("B42846949"))  //Codepassion
-        XCTAssertTrue(RuleDni().isValid("Q2805800F"))   //Ayuntamiento fuenlabrada
-        XCTAssertTrue(RuleDni().isValid("Q0811200E"))   //Ayuntamiento MANRESA
+        XCTAssertTrue(RuleDni().isValid("Q2805800F"))  //Ayuntamiento fuenlabrada
+        XCTAssertTrue(RuleDni().isValid("Q0811200E"))  //Ayuntamiento MANRESA
         
         XCTAssertTrue(RuleDni().isValid("V09989153"))
         XCTAssertTrue(RuleDni().isValid("J16720468"))
@@ -65,6 +65,12 @@ class RuleDNITest: XCTestCase {
         XCTAssertFalse(RuleDni().isValid("A58818502"))
         XCTAssertFalse(RuleDni().isValid("B663537780"))
         XCTAssertFalse(RuleDni().isValid("B428469A9"))  
+    }
+    
+    func test_does_validate_weird_ones(){
+        XCTAssertTrue(RuleDni().isValid("N7350619H"))   //N: Entidades extranjeras.
+        XCTAssertTrue(RuleDni().isValid("S3931107A"))   //S: Organos de la Administración del Estado y Comunidades Autónomas
+        XCTAssertTrue(RuleDni().isValid("W8243155B"))   //W: Establecimientos permanentes de entidades no residentes en España
     }
 
 }
