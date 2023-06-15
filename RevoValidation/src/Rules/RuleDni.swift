@@ -146,7 +146,7 @@ public class RuleDni : Rule {
                 return
             }
             
-            guard String(control) == String(cif.suffix(1)) else {
+            guard String(control % 10) == String(cif.suffix(1)) else {
                 throw DNIError.cifInvalidControlDigit
             }
         }
@@ -154,12 +154,11 @@ public class RuleDni : Rule {
         func calculateControl(body:String) -> Int {
             let sum = body.map { $0 }.mapWithIndex { element, index in
                 let number = Int(String(element))!
-                if (index+1) % 2 == 0 { return number }
+                if (index + 1) % 2 == 0 { return number }
                 return String(number * 2).map { Int(String($0))! }.reduce(0, +)
             }.reduce(0, +)
             
-            let control = 10 - Int(String(String(sum).suffix(1)))!
-            return control == 10 ? 0 : control
+            return 10 - Int(String(String(sum).suffix(1)))!
         }
         
         func isSpecialCase() -> Bool {
