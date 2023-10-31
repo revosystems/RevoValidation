@@ -135,7 +135,7 @@ public class RuleDni : Rule {
             
             let body = String(String(cif.prefix(8)).suffix(7))
             
-            guard let _ = Int(body) else {
+            guard let number = Int(body), number > 0 else {
                 throw DNIError.nonNumeric
             }
             
