@@ -1,0 +1,27 @@
+{
+    "name": "RevoValidation",
+    "version": "0.0.20",
+    "summary": "Validation package.",
+    "license": "MIT",
+    "swift_version": "5.0",
+    "platforms": {
+        "ios": "13.0"
+    },
+    "source": {
+        "git": "https://github.com/revosystems/revovalidation.git",
+        "tag": "0.0.20"
+    },
+    "dependencies":{
+        "RevoFoundation": [
+            ">= 0.2.0"
+        ]
+    },
+    "description": "Laravel like validation rules",
+    "homepage": "https://revo.works",
+    "authors": {
+        "Jordi Puigdellívol": "jordi@gloobus.net"
+    },
+    "source_files": [
+                     "RevoValidation/src/**/*.{swift}"
+                     ]
+}
