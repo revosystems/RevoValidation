@@ -1,6 +1,6 @@
 {
     "name": "RevoValidation",
-    "version": "0.0.21",
+    "version": "0.0.22",
     "summary": "Validation package.",
     "license": "MIT",
     "swift_version": "5.0",
@@ -9,7 +9,7 @@
     },
     "source": {
         "git": "https://github.com/revosystems/revovalidation.git",
-        "tag": "0.0.21"
+        "tag": "0.0.22"
     },
     "dependencies":{
         "RevoFoundation": [
