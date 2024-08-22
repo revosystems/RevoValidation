@@ -49,7 +49,7 @@ public struct FormValidation {
     }
     
     @discardableResult
-    public func setDelegate(_ delegate:ValidationDelegate) -> Self {
+    public func setDelegate(_ delegate:ValidationDelegate?) -> Self {
         fields.each { $0.delegate = delegate }
         return self
     }
