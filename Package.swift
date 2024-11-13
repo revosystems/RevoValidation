@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/revosystems/foundation.git", .exact(from: "0.2.22"))
+        .package(url: "https://github.com/revosystems/foundation.git", .exact("0.2.22"))
     ],
     targets: [
         .target(
