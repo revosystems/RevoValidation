@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,6 +50,7 @@
 		0BF68CC41C59C85FC53DC0B3 /* Pods-RevoValidationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidationTests.debug.xcconfig"; path = "Target Support Files/Pods-RevoValidationTests/Pods-RevoValidationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		313A029B2213DD326D7C7196 /* Pods_RevoValidationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevoValidationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F5E0E995082B9987FDA64E /* RuleCombined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleCombined.swift; sourceTree = "<group>"; };
+		55B1F2A32CE4F719005B5E00 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		5A599D79E3EF4BA409FAC3A3 /* Pods-RevoValidation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidation.release.xcconfig"; path = "Target Support Files/Pods-RevoValidation/Pods-RevoValidation.release.xcconfig"; sourceTree = "<group>"; };
 		8D7289D02497D090007FE172 /* RuleAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleAge.swift; sourceTree = "<group>"; };
 		8D89C2D725126F90005537F1 /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		BBB84ADD248D23B0004A7C76 = {
 			isa = PBXGroup;
 			children = (
+				55B1F2A32CE4F719005B5E00 /* Package.swift */,
 				BBB84AE8248D23B0004A7C76 /* RevoValidation */,
 				BBB84AFF248D23B3004A7C76 /* RevoValidationTests */,
 				BBB84AE7248D23B0004A7C76 /* Products */,
