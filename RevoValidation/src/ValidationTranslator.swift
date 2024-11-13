@@ -1,3 +1,4 @@
+import Foundation
 import RevoFoundation
 
 public class ValidationTranslator : Resolvable {
