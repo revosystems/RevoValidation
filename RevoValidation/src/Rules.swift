@@ -24,6 +24,7 @@ public struct Rules : ExpressibleByStringLiteral {
         case "numeric"              : return RuleNumeric()
         case "length"               : return RuleLenght(Int(params.last ?? "3") ?? 3)
         case "age"                  : return RuleAge(Int(params.last ?? "18") ?? 18)
+        case "regexp"               : return RuleRegexp(params.last ?? "")
         case "dni"                  : return RuleDni()
         case "unique"               : return RuleUnique(existing: params.last?.explode(",") ?? [])
         case "url"                  : return RuleUrl()
