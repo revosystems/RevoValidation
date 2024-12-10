@@ -32,6 +32,9 @@
 		BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */; };
 		BBE51DC428B90E2D00E4AFDA /* RuleDNITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */; };
 		BBFD8B792901823700A6E66F /* RuleRequiredIf.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD8B782901823700A6E66F /* RuleRequiredIf.swift */; };
+		EA1A0C742D085C0500518928 /* RuleRegexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C732D085BFE00518928 /* RuleRegexp.swift */; };
+		EA1A0C762D085C4F00518928 /* RuleRegexpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */; };
+		EA1A0C782D085CDA00518928 /* RuleUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C772D085CDA00518928 /* RuleUrl.swift */; };
 		EAFDCCD828DC71BD0038612F /* RuleUnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCCD728DC71BD0038612F /* RuleUnique.swift */; };
 		EAFDCCDA28DC73270038612F /* ValidationTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCCD928DC73270038612F /* ValidationTranslator.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +83,9 @@
 		BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNumeric.swift; sourceTree = "<group>"; };
 		BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDNITest.swift; sourceTree = "<group>"; };
 		BBFD8B782901823700A6E66F /* RuleRequiredIf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleRequiredIf.swift; sourceTree = "<group>"; };
+		EA1A0C732D085BFE00518928 /* RuleRegexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleRegexp.swift; sourceTree = "<group>"; };
+		EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleRegexpTest.swift; sourceTree = "<group>"; };
+		EA1A0C772D085CDA00518928 /* RuleUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleUrl.swift; sourceTree = "<group>"; };
 		EAFDCCD728DC71BD0038612F /* RuleUnique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleUnique.swift; sourceTree = "<group>"; };
 		EAFDCCD928DC73270038612F /* ValidationTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTranslator.swift; sourceTree = "<group>"; };
 		F82EF8AB48762E9058C4022E /* Pods-RevoValidation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidation.debug.xcconfig"; path = "Target Support Files/Pods-RevoValidation/Pods-RevoValidation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 		BBB84AFF248D23B3004A7C76 /* RevoValidationTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */,
 				BBB84B00248D23B3004A7C76 /* RevoValidationTests.swift */,
 				BBB84B02248D23B3004A7C76 /* Info.plist */,
 				BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */,
@@ -167,6 +174,8 @@
 		BBB84B0E248D23F6004A7C76 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				EA1A0C772D085CDA00518928 /* RuleUrl.swift */,
+				EA1A0C732D085BFE00518928 /* RuleRegexp.swift */,
 				EAFDCCD728DC71BD0038612F /* RuleUnique.swift */,
 				BBB84B0F248D23F6004A7C76 /* RuleContainsNumber.swift */,
 				BBB84B10248D23F6004A7C76 /* RuleContainSpecialChars.swift */,
@@ -372,12 +381,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB84AEE248D23B0004A7C76 /* ViewController.swift in Sources */,
+				EA1A0C782D085CDA00518928 /* RuleUrl.swift in Sources */,
 				8D7289D12497D090007FE172 /* RuleAge.swift in Sources */,
 				BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */,
 				BBB84B15248D23F6004A7C76 /* FormValidation.swift in Sources */,
 				EAFDCCDA28DC73270038612F /* ValidationTranslator.swift in Sources */,
 				EAFDCCD828DC71BD0038612F /* RuleUnique.swift in Sources */,
 				BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */,
+				EA1A0C742D085C0500518928 /* RuleRegexp.swift in Sources */,
 				BB09FD7728B90DC200DBD8A0 /* RuleDni.swift in Sources */,
 				BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */,
 				BBB84B16248D23F6004A7C76 /* Validation.swift in Sources */,
@@ -399,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB84B01248D23B3004A7C76 /* RevoValidationTests.swift in Sources */,
+				EA1A0C762D085C4F00518928 /* RuleRegexpTest.swift in Sources */,
 				BBE51DC428B90E2D00E4AFDA /* RuleDNITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
