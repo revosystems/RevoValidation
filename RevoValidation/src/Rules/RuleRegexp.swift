@@ -6,7 +6,7 @@ public class RuleRegexp : Rule {
     
     let regexp:String
     
-    init(_ regexp: String) {
+    public init(_ regexp: String) {
         self.regexp = regexp
     }
         
