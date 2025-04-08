@@ -12,6 +12,7 @@
 		6C22F238182AB618B3468942 /* Pods_RevoValidationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313A029B2213DD326D7C7196 /* Pods_RevoValidationTests.framework */; };
 		8D7289D12497D090007FE172 /* RuleAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7289D02497D090007FE172 /* RuleAge.swift */; };
 		8D89C2D825126F90005537F1 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89C2D725126F90005537F1 /* Rules.swift */; };
+		B8397D232DA512B200CAFB84 /* RuleDominicanCedula.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8397D222DA512B200CAFB84 /* RuleDominicanCedula.swift */; };
 		BB09FD7728B90DC200DBD8A0 /* RuleDni.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB09FD7628B90DC200DBD8A0 /* RuleDni.swift */; };
 		BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */; };
 		BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */; };
@@ -59,6 +60,7 @@
 		8D89C2D725126F90005537F1 /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		9985FDFA2146CFC0ABE31997 /* Pods-RevoValidationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidationTests.release.xcconfig"; path = "Target Support Files/Pods-RevoValidationTests/Pods-RevoValidationTests.release.xcconfig"; sourceTree = "<group>"; };
 		9EE5D610528889C0D67062E8 /* Pods_RevoValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevoValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8397D222DA512B200CAFB84 /* RuleDominicanCedula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDominicanCedula.swift; sourceTree = "<group>"; };
 		BB09FD7628B90DC200DBD8A0 /* RuleDni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDni.swift; sourceTree = "<group>"; };
 		BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleConfirmPassword.swift; sourceTree = "<group>"; };
 		BBB84AE6248D23B0004A7C76 /* RevoValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevoValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 				EAFDCCD728DC71BD0038612F /* RuleUnique.swift */,
 				BBB84B0F248D23F6004A7C76 /* RuleContainsNumber.swift */,
 				BBB84B10248D23F6004A7C76 /* RuleContainSpecialChars.swift */,
+				B8397D222DA512B200CAFB84 /* RuleDominicanCedula.swift */,
 				BBB84B11248D23F6004A7C76 /* RuleLength.swift */,
 				BBB84B12248D23F6004A7C76 /* RuleRequired.swift */,
 				BBB84B13248D23F6004A7C76 /* RuleEmail.swift */,
@@ -395,6 +398,7 @@
 				BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */,
 				BBFD8B792901823700A6E66F /* RuleRequiredIf.swift in Sources */,
 				BBB84B1A248D23F6004A7C76 /* RuleRequired.swift in Sources */,
+				B8397D232DA512B200CAFB84 /* RuleDominicanCedula.swift in Sources */,
 				BBB84B19248D23F6004A7C76 /* RuleLength.swift in Sources */,
 				BBB84B18248D23F6004A7C76 /* RuleContainSpecialChars.swift in Sources */,
 				BBB84B1B248D23F6004A7C76 /* RuleEmail.swift in Sources */,
