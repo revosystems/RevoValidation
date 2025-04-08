@@ -64,4 +64,5 @@ public class RuleDominicanCedula : Rule {
             guard checkDigit == verifier else { throw CedulaError.invalidChecksum }
         }
     }
+
 }
