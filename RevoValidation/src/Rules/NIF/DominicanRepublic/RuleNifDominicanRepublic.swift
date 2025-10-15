@@ -1,24 +1,6 @@
 import Foundation
 import RevoFoundation
 
-/**
- Dominican Republic Tax Identification Number Validator
- 
- Validates Dominican Cédula (11 digits) and RNC (9 digits)
- 
- # Cédula Format:
- - 11 digits with check digit validation
- - Cannot start with 000
- - Uses weighted sum algorithm with multipliers [1,2,1,2,1,2,1,2,1,2]
- 
- # RNC Format:
- - 9 digits with check digit validation
- - Uses weighted sum algorithm with weights [7,9,8,6,5,4,3,2]
- 
- # Examples:
- - Valid Cédula: 40227854020, 00112345674
- - Valid RNC: 123456782, 101234562
- */
 public class RuleNifDominicanRepublic: Rule {
     
     enum IdentifierError: Error, CustomStringConvertible {
