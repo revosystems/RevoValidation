@@ -14,7 +14,6 @@
 		8D89C2D825126F90005537F1 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D89C2D725126F90005537F1 /* Rules.swift */; };
 		B8397D232DA512B200CAFB84 /* RuleDominicanTaxIdentificationNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8397D222DA512B200CAFB84 /* RuleDominicanTaxIdentificationNumber.swift */; };
 		B8EAC2B92DA5236F00329689 /* RuleDominicanTaxIdentificationNumberTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EAC2B82DA5236F00329689 /* RuleDominicanTaxIdentificationNumberTest.swift */; };
-		BB09FD7728B90DC200DBD8A0 /* RuleDni.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB09FD7628B90DC200DBD8A0 /* RuleDni.swift */; };
 		BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */; };
 		BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */; };
 		BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84AEB248D23B0004A7C76 /* SceneDelegate.swift */; };
@@ -31,13 +30,24 @@
 		BBB84B1B248D23F6004A7C76 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B13248D23F6004A7C76 /* RuleEmail.swift */; };
 		BBB84B1C248D23F6004A7C76 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B14248D23F6004A7C76 /* Rule.swift */; };
 		BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */; };
-		BBE51DC428B90E2D00E4AFDA /* RuleDNITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */; };
 		BBFD8B792901823700A6E66F /* RuleRequiredIf.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFD8B782901823700A6E66F /* RuleRequiredIf.swift */; };
 		EA1A0C742D085C0500518928 /* RuleRegexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C732D085BFE00518928 /* RuleRegexp.swift */; };
 		EA1A0C762D085C4F00518928 /* RuleRegexpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */; };
 		EA1A0C782D085CDA00518928 /* RuleUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C772D085CDA00518928 /* RuleUrl.swift */; };
 		EAFDCCD828DC71BD0038612F /* RuleUnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCCD728DC71BD0038612F /* RuleUnique.swift */; };
 		EAFDCCDA28DC73270038612F /* ValidationTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCCD928DC73270038612F /* ValidationTranslator.swift */; };
+		F63AA1E82E9F9DB300DBAF39 /* RuleNifPortugal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1DF2E9F9DB300DBAF39 /* RuleNifPortugal.swift */; };
+		F63AA1E92E9F9DB300DBAF39 /* NIE.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1E22E9F9DB300DBAF39 /* NIE.swift */; };
+		F63AA1EA2E9F9DB300DBAF39 /* CIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1E12E9F9DB300DBAF39 /* CIF.swift */; };
+		F63AA1EB2E9F9DB300DBAF39 /* RuleNif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1E62E9F9DB300DBAF39 /* RuleNif.swift */; };
+		F63AA1EC2E9F9DB300DBAF39 /* NIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1E32E9F9DB300DBAF39 /* NIF.swift */; };
+		F63AA1ED2E9F9DB300DBAF39 /* RuleNifSpain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1E42E9F9DB300DBAF39 /* RuleNifSpain.swift */; };
+		F63AA1EE2E9F9DB300DBAF39 /* RuleNifDominicanRepublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1DD2E9F9DB300DBAF39 /* RuleNifDominicanRepublic.swift */; };
+		F63AA1F32E9F9DC500DBAF39 /* PortugalNifRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1F02E9F9DC500DBAF39 /* PortugalNifRuleTest.swift */; };
+		F63AA1F42E9F9DC500DBAF39 /* RuleNifTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1F12E9F9DC500DBAF39 /* RuleNifTest.swift */; };
+		F63AA1F52E9F9DC500DBAF39 /* SpainNifRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1F22E9F9DC500DBAF39 /* SpainNifRuleTest.swift */; };
+		F63AA1F62E9F9DC500DBAF39 /* DominicanRepublicNifRuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1EF2E9F9DC500DBAF39 /* DominicanRepublicNifRuleTest.swift */; };
+		F63AA1F92E9F9DDC00DBAF39 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1F72E9F9DDC00DBAF39 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +72,6 @@
 		9EE5D610528889C0D67062E8 /* Pods_RevoValidation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevoValidation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8397D222DA512B200CAFB84 /* RuleDominicanTaxIdentificationNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDominicanTaxIdentificationNumber.swift; sourceTree = "<group>"; };
 		B8EAC2B82DA5236F00329689 /* RuleDominicanTaxIdentificationNumberTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDominicanTaxIdentificationNumberTest.swift; sourceTree = "<group>"; };
-		BB09FD7628B90DC200DBD8A0 /* RuleDni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDni.swift; sourceTree = "<group>"; };
 		BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleConfirmPassword.swift; sourceTree = "<group>"; };
 		BBB84AE6248D23B0004A7C76 /* RevoValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevoValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB84AE9248D23B0004A7C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,13 +92,24 @@
 		BBB84B13248D23F6004A7C76 /* RuleEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleEmail.swift; sourceTree = "<group>"; };
 		BBB84B14248D23F6004A7C76 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		BBB84B1D248D241B004A7C76 /* RuleNumeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNumeric.swift; sourceTree = "<group>"; };
-		BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDNITest.swift; sourceTree = "<group>"; };
 		BBFD8B782901823700A6E66F /* RuleRequiredIf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleRequiredIf.swift; sourceTree = "<group>"; };
 		EA1A0C732D085BFE00518928 /* RuleRegexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleRegexp.swift; sourceTree = "<group>"; };
 		EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleRegexpTest.swift; sourceTree = "<group>"; };
 		EA1A0C772D085CDA00518928 /* RuleUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleUrl.swift; sourceTree = "<group>"; };
 		EAFDCCD728DC71BD0038612F /* RuleUnique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleUnique.swift; sourceTree = "<group>"; };
 		EAFDCCD928DC73270038612F /* ValidationTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTranslator.swift; sourceTree = "<group>"; };
+		F63AA1DD2E9F9DB300DBAF39 /* RuleNifDominicanRepublic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNifDominicanRepublic.swift; sourceTree = "<group>"; };
+		F63AA1DF2E9F9DB300DBAF39 /* RuleNifPortugal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNifPortugal.swift; sourceTree = "<group>"; };
+		F63AA1E12E9F9DB300DBAF39 /* CIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIF.swift; sourceTree = "<group>"; };
+		F63AA1E22E9F9DB300DBAF39 /* NIE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIE.swift; sourceTree = "<group>"; };
+		F63AA1E32E9F9DB300DBAF39 /* NIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIF.swift; sourceTree = "<group>"; };
+		F63AA1E42E9F9DB300DBAF39 /* RuleNifSpain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNifSpain.swift; sourceTree = "<group>"; };
+		F63AA1E62E9F9DB300DBAF39 /* RuleNif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNif.swift; sourceTree = "<group>"; };
+		F63AA1EF2E9F9DC500DBAF39 /* DominicanRepublicNifRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominicanRepublicNifRuleTest.swift; sourceTree = "<group>"; };
+		F63AA1F02E9F9DC500DBAF39 /* PortugalNifRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortugalNifRuleTest.swift; sourceTree = "<group>"; };
+		F63AA1F12E9F9DC500DBAF39 /* RuleNifTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNifTest.swift; sourceTree = "<group>"; };
+		F63AA1F22E9F9DC500DBAF39 /* SpainNifRuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpainNifRuleTest.swift; sourceTree = "<group>"; };
+		F63AA1F72E9F9DDC00DBAF39 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		F82EF8AB48762E9058C4022E /* Pods-RevoValidation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevoValidation.debug.xcconfig"; path = "Target Support Files/Pods-RevoValidation/Pods-RevoValidation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,9 +172,12 @@
 		BBB84AFF248D23B3004A7C76 /* RevoValidationTests */ = {
 			isa = PBXGroup;
 			children = (
+				F63AA1EF2E9F9DC500DBAF39 /* DominicanRepublicNifRuleTest.swift */,
+				F63AA1F02E9F9DC500DBAF39 /* PortugalNifRuleTest.swift */,
+				F63AA1F12E9F9DC500DBAF39 /* RuleNifTest.swift */,
+				F63AA1F22E9F9DC500DBAF39 /* SpainNifRuleTest.swift */,
 				EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */,
 				BBB84B02248D23B3004A7C76 /* Info.plist */,
-				BBE51DC328B90E2D00E4AFDA /* RuleDNITest.swift */,
 				B8EAC2B82DA5236F00329689 /* RuleDominicanTaxIdentificationNumberTest.swift */,
 			);
 			path = RevoValidationTests;
@@ -163,6 +186,7 @@
 		BBB84B0B248D23BA004A7C76 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F63AA1F82E9F9DDC00DBAF39 /* Helpers */,
 				8D89C2D725126F90005537F1 /* Rules.swift */,
 				BBB84B0C248D23F6004A7C76 /* FormValidation.swift */,
 				BBB84B0E248D23F6004A7C76 /* Rules */,
@@ -176,6 +200,7 @@
 		BBB84B0E248D23F6004A7C76 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				F63AA1E72E9F9DB300DBAF39 /* NIF */,
 				EA1A0C772D085CDA00518928 /* RuleUrl.swift */,
 				EA1A0C732D085BFE00518928 /* RuleRegexp.swift */,
 				EAFDCCD728DC71BD0038612F /* RuleUnique.swift */,
@@ -189,7 +214,6 @@
 				8D7289D02497D090007FE172 /* RuleAge.swift */,
 				BB812D3D249E511C007E3CEF /* RuleConfirmPassword.swift */,
 				43F5E0E995082B9987FDA64E /* RuleCombined.swift */,
-				BB09FD7628B90DC200DBD8A0 /* RuleDni.swift */,
 				BBFD8B782901823700A6E66F /* RuleRequiredIf.swift */,
 			);
 			path = Rules;
@@ -213,6 +237,52 @@
 				9985FDFA2146CFC0ABE31997 /* Pods-RevoValidationTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F63AA1DE2E9F9DB300DBAF39 /* DominicanRepublic */ = {
+			isa = PBXGroup;
+			children = (
+				F63AA1DD2E9F9DB300DBAF39 /* RuleNifDominicanRepublic.swift */,
+			);
+			path = DominicanRepublic;
+			sourceTree = "<group>";
+		};
+		F63AA1E02E9F9DB300DBAF39 /* Portugal */ = {
+			isa = PBXGroup;
+			children = (
+				F63AA1DF2E9F9DB300DBAF39 /* RuleNifPortugal.swift */,
+			);
+			path = Portugal;
+			sourceTree = "<group>";
+		};
+		F63AA1E52E9F9DB300DBAF39 /* Spain */ = {
+			isa = PBXGroup;
+			children = (
+				F63AA1E12E9F9DB300DBAF39 /* CIF.swift */,
+				F63AA1E22E9F9DB300DBAF39 /* NIE.swift */,
+				F63AA1E32E9F9DB300DBAF39 /* NIF.swift */,
+				F63AA1E42E9F9DB300DBAF39 /* RuleNifSpain.swift */,
+			);
+			path = Spain;
+			sourceTree = "<group>";
+		};
+		F63AA1E72E9F9DB300DBAF39 /* NIF */ = {
+			isa = PBXGroup;
+			children = (
+				F63AA1DE2E9F9DB300DBAF39 /* DominicanRepublic */,
+				F63AA1E02E9F9DB300DBAF39 /* Portugal */,
+				F63AA1E52E9F9DB300DBAF39 /* Spain */,
+				F63AA1E62E9F9DB300DBAF39 /* RuleNif.swift */,
+			);
+			path = NIF;
+			sourceTree = "<group>";
+		};
+		F63AA1F82E9F9DDC00DBAF39 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F63AA1F72E9F9DDC00DBAF39 /* Country.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,9 +415,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RevoValidation/Pods-RevoValidation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RevoValidation/Pods-RevoValidation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -385,6 +459,13 @@
 			files = (
 				BBB84AEE248D23B0004A7C76 /* ViewController.swift in Sources */,
 				EA1A0C782D085CDA00518928 /* RuleUrl.swift in Sources */,
+				F63AA1E82E9F9DB300DBAF39 /* RuleNifPortugal.swift in Sources */,
+				F63AA1E92E9F9DB300DBAF39 /* NIE.swift in Sources */,
+				F63AA1EA2E9F9DB300DBAF39 /* CIF.swift in Sources */,
+				F63AA1EB2E9F9DB300DBAF39 /* RuleNif.swift in Sources */,
+				F63AA1EC2E9F9DB300DBAF39 /* NIF.swift in Sources */,
+				F63AA1ED2E9F9DB300DBAF39 /* RuleNifSpain.swift in Sources */,
+				F63AA1EE2E9F9DB300DBAF39 /* RuleNifDominicanRepublic.swift in Sources */,
 				8D7289D12497D090007FE172 /* RuleAge.swift in Sources */,
 				BBB84AEA248D23B0004A7C76 /* AppDelegate.swift in Sources */,
 				BBB84B15248D23F6004A7C76 /* FormValidation.swift in Sources */,
@@ -392,7 +473,6 @@
 				EAFDCCD828DC71BD0038612F /* RuleUnique.swift in Sources */,
 				BBB84B1E248D241B004A7C76 /* RuleNumeric.swift in Sources */,
 				EA1A0C742D085C0500518928 /* RuleRegexp.swift in Sources */,
-				BB09FD7728B90DC200DBD8A0 /* RuleDni.swift in Sources */,
 				BB812D3E249E511C007E3CEF /* RuleConfirmPassword.swift in Sources */,
 				BBB84B16248D23F6004A7C76 /* Validation.swift in Sources */,
 				BBB84AEC248D23B0004A7C76 /* SceneDelegate.swift in Sources */,
@@ -405,6 +485,7 @@
 				BBB84B1C248D23F6004A7C76 /* Rule.swift in Sources */,
 				BBB84B17248D23F6004A7C76 /* RuleContainsNumber.swift in Sources */,
 				8D89C2D825126F90005537F1 /* Rules.swift in Sources */,
+				F63AA1F92E9F9DDC00DBAF39 /* Country.swift in Sources */,
 				43F5E176544B7C7C422020DF /* RuleCombined.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +496,10 @@
 			files = (
 				EA1A0C762D085C4F00518928 /* RuleRegexpTest.swift in Sources */,
 				B8EAC2B92DA5236F00329689 /* RuleDominicanTaxIdentificationNumberTest.swift in Sources */,
-				BBE51DC428B90E2D00E4AFDA /* RuleDNITest.swift in Sources */,
+				F63AA1F32E9F9DC500DBAF39 /* PortugalNifRuleTest.swift in Sources */,
+				F63AA1F42E9F9DC500DBAF39 /* RuleNifTest.swift in Sources */,
+				F63AA1F52E9F9DC500DBAF39 /* SpainNifRuleTest.swift in Sources */,
+				F63AA1F62E9F9DC500DBAF39 /* DominicanRepublicNifRuleTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
