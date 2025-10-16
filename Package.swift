@@ -22,6 +22,11 @@ let package = Package(
                 .product(name: "RevoFoundation", package: "foundation")
             ],
             path: "RevoValidation/src"
+        ),
+        .testTarget(
+            name: "RevoValidationTests",
+            dependencies: ["RevoValidation"],
+            path: "RevoValidationTests"
         )
     ],
     swiftLanguageVersions: [.v5]
