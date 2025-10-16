@@ -6,27 +6,6 @@ class DominicanRepublicNifRuleTest: XCTestCase {
     typealias DominicanRule = RevoValidation.RuleNifDominicanRepublic
     
     // MARK: - Valid Cédula Tests (11 digits)
-    
-    func test_correct_cedula_passes_00131978959() {
-        let rule = DominicanRule()
-        XCTAssertTrue(rule.isValid("00131978959"))
-    }
-    
-    func test_correct_cedula_passes_02800570638() {
-        let rule = DominicanRule()
-        XCTAssertTrue(rule.isValid("02800570638"))
-    }
-    
-    func test_correct_cedula_passes_00131785222() {
-        let rule = DominicanRule()
-        XCTAssertTrue(rule.isValid("00131785222"))
-    }
-    
-    func test_correct_cedula_passes_40235300353() {
-        let rule = DominicanRule()
-        XCTAssertTrue(rule.isValid("40235300353"))
-    }
-    
     func test_all_valid_cedulas_pass() {
         let rule = DominicanRule()
         let validCedulas = [
@@ -42,27 +21,6 @@ class DominicanRepublicNifRuleTest: XCTestCase {
     }
     
     // MARK: - Invalid Cédula Tests
-    
-    func test_incorrect_cedula_fails_wrong_check_digit() {
-        let rule = DominicanRule()
-        XCTAssertFalse(rule.isValid("00131978958"))  // Wrong check digit
-    }
-    
-    func test_incorrect_cedula_fails_starts_with_000() {
-        let rule = DominicanRule()
-        XCTAssertFalse(rule.isValid("00013918253"))  // Starts with 000
-    }
-    
-    func test_incorrect_cedula_fails_too_short() {
-        let rule = DominicanRule()
-        XCTAssertFalse(rule.isValid("123"))  // Too short
-    }
-    
-    func test_incorrect_cedula_fails_non_numeric() {
-        let rule = DominicanRule()
-        XCTAssertFalse(rule.isValid("ABCDEFGHIJK"))  // Non-numeric
-    }
-    
     func test_all_invalid_cedulas_fail() {
         let rule = DominicanRule()
         let invalidCedulas = [
@@ -79,21 +37,6 @@ class DominicanRepublicNifRuleTest: XCTestCase {
     
     // MARK: - Valid RNC Tests (9 digits)
     
-    func test_correct_rnc_passes_132123921() {
-        let rule = DominicanRule()
-        XCTAssertTrue(rule.isValid("132123921"))
-    }
-    
-    func test_correct_rnc_passes_130624127() {
-        let rule = DominicanRule()
-        XCTAssertTrue(rule.isValid("130624127"))
-    }
-    
-    func test_correct_rnc_passes_101630523() {
-        let rule = DominicanRule()
-        XCTAssertTrue(rule.isValid("101630523"))
-    }
-    
     func test_all_valid_rncs_pass() {
         let rule = DominicanRule()
         let validRNCs = [
@@ -108,16 +51,6 @@ class DominicanRepublicNifRuleTest: XCTestCase {
     }
     
     // MARK: - Invalid RNC Tests
-    
-    func test_incorrect_rnc_fails_too_short() {
-        let rule = DominicanRule()
-        XCTAssertFalse(rule.isValid("13062412"))  // Too short (8 digits)
-    }
-    
-    func test_incorrect_rnc_fails_invalid_start() {
-        let rule = DominicanRule()
-        XCTAssertFalse(rule.isValid("832123921"))  // Starts with invalid number
-    }
     
     func test_all_invalid_rncs_fail() {
         let rule = DominicanRule()

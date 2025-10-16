@@ -1,19 +1,6 @@
 import Foundation
 import RevoFoundation
 
-/**
- Spanish NIF (Número de Identificación Fiscal) Validator
- 
- Validates Spanish NIFs with the format: 8 digits + 1 control letter
- 
- # Algorithm:
- The control letter is calculated from the 8-digit number modulo 23,
- then mapped to a specific letter from a predefined table.
- 
- # Example:
- - Valid: 12151135M, 39359951M, 39365446A
- - Invalid: 12151135G (wrong letter)
- */
 public struct NIF {
     
     enum NifError: Error, CustomStringConvertible {

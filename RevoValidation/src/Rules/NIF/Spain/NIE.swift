@@ -1,19 +1,6 @@
 import Foundation
 import RevoFoundation
 
-/**
- Spanish NIE (Número de Identidad de Extranjero) Validator
- 
- Validates Spanish NIEs with the format: X/Y/Z + 7 digits + 1 control letter
- 
- # Algorithm:
- - Initial letter (X, Y, Z) is converted to a number (0, 1, 2)
- - The resulting 8-digit number is validated using NIF algorithm
- 
- # Example:
- - Valid: X2151135Z, Y9359951T, X9365446F
- - Invalid: X21511353Z (wrong length)
- */
 public struct NIE {
     
     enum NieError: Error, CustomStringConvertible {

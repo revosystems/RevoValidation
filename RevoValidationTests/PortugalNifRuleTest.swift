@@ -5,27 +5,6 @@ class PortugalNifRuleTest: XCTestCase {
     
     
     // MARK: - Valid NIF Tests
-    
-    func test_correct_nif_passes_360529097() {
-        let rule = RuleNifPortugal()
-        XCTAssertTrue(rule.isValid("360529097"))
-    }
-    
-    func test_correct_nif_passes_331106817() {
-        let rule = RuleNifPortugal()
-        XCTAssertTrue(rule.isValid("331106817"))
-    }
-    
-    func test_correct_nif_passes_170952479() {
-        let rule = RuleNifPortugal()
-        XCTAssertTrue(rule.isValid("170952479"))
-    }
-    
-    func test_correct_nif_passes_556572084() {
-        let rule = RuleNifPortugal()
-        XCTAssertTrue(rule.isValid("556572084"))
-    }
-    
     func test_all_valid_nifs_pass() {
         let rule = RuleNifPortugal()
         let validNifs = [
@@ -41,52 +20,6 @@ class PortugalNifRuleTest: XCTestCase {
     }
     
     // MARK: - Invalid NIF Tests
-    
-    func test_incorrect_nif_fails_987654321() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("987654321"))
-    }
-    
-    func test_incorrect_nif_fails_999999999() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("999999999"))
-    }
-    
-    func test_incorrect_nif_fails_too_short() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("12345678"))
-    }
-    
-    func test_incorrect_nif_fails_too_long() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("1234567890"))
-    }
-    
-    func test_incorrect_nif_fails_not_numeric_A23456789() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("A23456789"))
-    }
-    
-    func test_incorrect_nif_fails_not_numeric_1234B6789() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("1234B6789"))
-    }
-    
-    func test_incorrect_nif_fails_not_numeric_12345678C() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("12345678C"))
-    }
-    
-    func test_incorrect_nif_fails_starts_with_0() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("023456789"))
-    }
-    
-    func test_incorrect_nif_fails_starts_with_4() {
-        let rule = RuleNifPortugal()
-        XCTAssertFalse(rule.isValid("423456789"))
-    }
-    
     func test_all_invalid_nifs_fail() {
         let rule = RuleNifPortugal()
         let invalidNifs = [

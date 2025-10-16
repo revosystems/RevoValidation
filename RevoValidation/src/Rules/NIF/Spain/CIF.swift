@@ -1,20 +1,6 @@
 import Foundation
 import RevoFoundation
 
-/**
- Spanish CIF (Código de Identificación Fiscal) Validator
- 
- Validates Spanish CIFs for companies with the format: Letter + 7 digits + control digit/letter
- 
- # Algorithm:
- - Initial letter indicates the type of entity
- - Control digit is calculated using a weighted sum algorithm
- - Some entity types use a letter instead of a digit as control character
- 
- # Example:
- - Valid: A58818501, B66353780, Q2805800F
- - Invalid: A58818502 (wrong control digit)
- */
 public struct CIF {
     
     enum CifError: Error, CustomStringConvertible {
@@ -92,10 +78,9 @@ public struct CIF {
     }
     
     func validateSpecialCases(cleanCif: String, control: Int) throws {
-        let control = control + 64
+        let control: Int = control + 64
         
-        var string = ""
-        string.append(Character(Unicode.Scalar(control)!))
+        var string: String = String(Character(Unicode.Scalar(control)!))
         
         guard string == String(cleanCif.suffix(1)) else {
             throw CifError.notValid

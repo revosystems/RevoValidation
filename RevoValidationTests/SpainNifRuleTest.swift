@@ -18,22 +18,7 @@ class SpainNifRuleTest: XCTestCase {
     }
     
     // MARK: - Valid NIF Tests
-    
-    func test_correct_nif_passes_12151135M() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("12151135M"))
-    }
-    
-    func test_correct_nif_passes_39359951M() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("39359951M"))
-    }
-    
-    func test_correct_nif_passes_39365446A() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("39365446A"))
-    }
-    
+
     func test_all_correct_nifs_pass() {
         let rule = RuleNifSpain()
         let correctNifs = [
@@ -47,23 +32,7 @@ class SpainNifRuleTest: XCTestCase {
         }
     }
     
-    // MARK: - Invalid NIF Tests
-    
-    func test_incorrect_nif_fails_12151135G() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("12151135G"))
-    }
-    
-    func test_incorrect_nif_fails_3935995AM() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("3935995AM"))
-    }
-    
-    func test_incorrect_nif_fails_393654466A() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("393654466A"))
-    }
-    
+    // MARK: - Invalid NIF Tests    
     func test_all_incorrect_nifs_fail() {
         let rule = RuleNifSpain()
         let incorrectNifs = [
@@ -78,22 +47,6 @@ class SpainNifRuleTest: XCTestCase {
     }
     
     // MARK: - Valid NIE Tests
-    
-    func test_correct_nie_passes_X2151135Z() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("X2151135Z"))
-    }
-    
-    func test_correct_nie_passes_Y9359951T() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("Y9359951T"))
-    }
-    
-    func test_correct_nie_passes_X9365446F() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("X9365446F"))
-    }
-    
     func test_all_correct_nies_pass() {
         let rule = RuleNifSpain()
         let correctNies = [
@@ -107,23 +60,7 @@ class SpainNifRuleTest: XCTestCase {
         }
     }
     
-    // MARK: - Invalid NIE Tests
-    
-    func test_incorrect_nie_fails_X21511353Z() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("X21511353Z"))
-    }
-    
-    func test_incorrect_nie_fails_Y9359951AT() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("Y9359951AT"))
-    }
-    
-    func test_incorrect_nie_fails_X9365446A() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("X9365446A"))
-    }
-    
+    // MARK: - Invalid NIE Tests   
     func test_all_incorrect_nies_fail() {
         let rule = RuleNifSpain()
         let incorrectNies = [
@@ -138,47 +75,6 @@ class SpainNifRuleTest: XCTestCase {
     }
     
     // MARK: - Valid CIF Tests
-    
-    func test_correct_cif_passes_A58818501() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("A58818501"))
-    }
-    
-    func test_correct_cif_passes_B66353780() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("B66353780")) // Revo
-    }
-    
-    func test_correct_cif_passes_B42846949() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("B42846949")) // Codepassion
-    }
-    
-    func test_correct_cif_passes_Q2805800F() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("Q2805800F")) // Fuenlabrada
-    }
-    
-    func test_correct_cif_passes_Q0811200E() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("Q0811200E")) // Manresa
-    }
-    
-    func test_correct_cif_passes_Q2818018J() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("Q2818018J")) // Universidad
-    }
-    
-    func test_correct_cif_passes_V09989153() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("V09989153"))
-    }
-    
-    func test_correct_cif_passes_J16720468() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("J16720468"))
-    }
-    
     func test_all_correct_cifs_pass() {
         let rule = RuleNifSpain()
         let correctCifs = [
@@ -198,22 +94,6 @@ class SpainNifRuleTest: XCTestCase {
     }
     
     // MARK: - Invalid CIF Tests
-    
-    func test_incorrect_cif_fails_A58818502() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("A58818502"))
-    }
-    
-    func test_incorrect_cif_fails_B663537780() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("B663537780"))
-    }
-    
-    func test_incorrect_cif_fails_B428469A9() {
-        let rule = RuleNifSpain()
-        XCTAssertFalse(rule.isValid("B428469A9"))
-    }
-    
     func test_all_incorrect_cifs_fail() {
         let rule = RuleNifSpain()
         let incorrectCifs = [
@@ -228,22 +108,6 @@ class SpainNifRuleTest: XCTestCase {
     }
     
     // MARK: - Special Cases ("Weird Ones")
-    
-    func test_validates_weird_ones_N7350619H() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("N7350619H")) // N: Entidades extranjeras
-    }
-    
-    func test_validates_weird_ones_S3931107A() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("S3931107A")) // S: Órganos de la Administración
-    }
-    
-    func test_validates_weird_ones_W8243155B() {
-        let rule = RuleNifSpain()
-        XCTAssertTrue(rule.isValid("W8243155B")) // W: Establecimientos permanentes
-    }
-    
     func test_all_weird_ones_pass() {
         let rule = RuleNifSpain()
         let weirdOnes = [

@@ -10,9 +10,9 @@ public class RuleNifSpain: Rule {
         var description: String {
             switch self {
             case .notValid:
-                return "Not a valid NIF."
+                "Not a valid NIF."
             case .defaultNifNotAllowed:
-                return "Default NIF not allowed"
+                "Default NIF not allowed"
             }
         }
     }
