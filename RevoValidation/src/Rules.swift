@@ -37,22 +37,26 @@ public struct Rules : ExpressibleByStringLiteral {
     }
     
     public func validate(_ field:UITextField) -> Rules {
+        validate(field.text)
+    }
+    
+    public func validate(_ text:String?) -> Rules {
         Rules(rules.reject {
-            if skipsValidation(field: field, rule:$0) {
+            if skipsValidation(text: text, rule:$0) {
                 return true
             }
-            return $0.isValid(field.text ?? "")
+            return $0.isValid(text ?? "")
         })
     }
     
-    private func skipsValidation(field:UITextField, rule:Rule) -> Bool {
+    private func skipsValidation(text:String?, rule:Rule) -> Bool {
         if (fieldsToCheckEvenWhenEmpty.contains {
             type(of: rule) == $0 }
         ) {
             return false
         }
         
-        return field.text == nil || field.text == ""
+        return text == nil || text == ""
     }
     
     var fieldsToCheckEvenWhenEmpty: [Rule.Type] {
