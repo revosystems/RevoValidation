@@ -5,10 +5,8 @@ public struct RulesViewModifier : ViewModifier {
     @ObservedObject var validator: FormValidator
     @Binding var text: String
     let rules: Rules
-
-    // Stable identifier for this field instance.
+    
     @State private var fieldID: UUID = UUID()
-
     @State var invalidRules: Rules? = nil
 
     public func body(content: Content) -> some View {
@@ -21,18 +19,11 @@ public struct RulesViewModifier : ViewModifier {
             }
         }
         .onAppear {
-            // Initialize entry for this field so aggregate validity can be computed.
             validator.setErrors(for: fieldID, rules: nil)
         }
         .onChange(of: text) { _, newValue in
             let invalidRules = rules.validate(newValue)
-            
-            if invalidRules.count > 0 {
-                validator.setErrors(for: fieldID, rules: invalidRules)
-            } else {
-                validator.setErrors(for: fieldID, rules: nil)
-            }
-            
+            validator.setErrors(for: fieldID, rules: invalidRules.count > 0 ? invalidRules : nil )
             self.invalidRules = invalidRules
         }
         .overlay(alignment:.topTrailing) {
@@ -43,11 +34,12 @@ public struct RulesViewModifier : ViewModifier {
             }
         }
         .onDisappear {
-            // Optionally clear when the field goes away.
             validator.clearField(fieldID)
         }
     }
 }
+
+//MARK: - TextField extension
 
 public extension TextField {
     func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: [Rule]) -> some View {
