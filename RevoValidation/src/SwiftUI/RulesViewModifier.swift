@@ -28,8 +28,8 @@ public struct RulesViewModifier : ViewModifier {
         }
         .overlay(alignment:.topTrailing) {
             if (invalidRules?.count ?? 0) > 0 {
-                Image(systemName: "exclamationmark.triangle.fill")
-                    .foregroundStyle(Color.orange)
+                Image(systemName: "exclamationmark.circle.fill")
+                    .foregroundStyle(Color.red)
                     .offset(y:2)
             }
         }
