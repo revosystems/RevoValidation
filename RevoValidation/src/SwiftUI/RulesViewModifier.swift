@@ -1,30 +1,33 @@
 import SwiftUI
 
-@available(iOS 17.0, *)
+@available(iOS 15.0, *)
 public struct RulesViewModifier : ViewModifier {
     @ObservedObject var validator: FormValidator
     @Binding var text: String
-    let rules: Rules
-    
-    @State private var fieldID: UUID = UUID()
+    @State var rules: Rules
+    @State var fieldID: String
     @State var invalidRules: Rules? = nil
+    @Binding var update: Int
+    let rulesProvider: (() -> Rules)?
+    
 
     public func body(content: Content) -> some View {
         VStack(alignment: .leading) {
             content
             if let invalid = invalidRules, !invalid.errorMessage.isEmpty {
                 Text(invalid.errorMessage)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.black.opacity(0.5))
                     .font(.caption)
             }
         }
         .onAppear {
-            validator.setErrors(for: fieldID, rules: nil)
+            revalidate(with: text)
         }
-        .onChange(of: text) { _, newValue in
-            let invalidRules = rules.validate(newValue)
-            validator.setErrors(for: fieldID, rules: invalidRules.count > 0 ? invalidRules : nil )
-            self.invalidRules = invalidRules
+        .onChange(of: text) { newValue in
+            revalidate(with: newValue)
+        }
+        .onChange(of: update) { _ in
+            revalidate(with: text)
         }
         .overlay(alignment:.topTrailing) {
             if (invalidRules?.count ?? 0) > 0 {
@@ -37,32 +40,41 @@ public struct RulesViewModifier : ViewModifier {
             validator.clearField(fieldID)
         }
     }
+    
+    private func revalidate(with currentText: String) {
+        if let rulesProvider {
+            rules = rulesProvider()
+        }
+        
+        let invalidRules = rules.validate(currentText)
+        validator.setErrors(for: fieldID, rules: invalidRules.count > 0 ? invalidRules : nil)
+        self.invalidRules = invalidRules
+    }
 }
 
 //MARK: - TextField extension
 
+@available(iOS 15.0, *)
 public extension TextField {
-    func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: [Rule]) -> some View {
-        if #available(iOS 17.0, *) {
-            return modifier(RulesViewModifier(
-                validator: formValidator,
-                text: text,
-                rules: Rules(rules))
-            )
-        } else {
-            return self
-        }
+    func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: [Rule], fieldId:String, rulesProvider: (() -> Rules)? = nil, update: Binding<Int>? = nil) -> some View {
+        return modifier(RulesViewModifier(
+            validator: formValidator,
+            text: text,
+            rules: Rules(rules),
+            fieldID: fieldId,
+            update: update ?? Binding.constant(0),
+            rulesProvider: rulesProvider)
+        )
     }
 
-    func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: String) -> some View {
-        if #available(iOS 17.0, *) {
-            return modifier(RulesViewModifier(
-                validator: formValidator,
-                text: text,
-                rules: Rules(stringLiteral: rules)
-            ))
-        } else {
-            return self
-        }
+    func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: String, fieldId:String, rulesProvider: (() -> Rules)? = nil, update: Binding<Int>? = nil) -> some View {
+        return modifier(RulesViewModifier(
+            validator: formValidator,
+            text: text,
+            rules: Rules(stringLiteral: rules),
+            fieldID: fieldId,
+            update: update ?? Binding.constant(0),
+            rulesProvider: rulesProvider)
+        )
     }
 }
