@@ -36,9 +36,6 @@ public struct RulesViewModifier : ViewModifier {
                     .offset(y:2)
             }
         }
-        .onDisappear {
-            validator.clearField(fieldID)
-        }
     }
     
     private func revalidate(with currentText: String) {
