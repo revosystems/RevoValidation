@@ -8,6 +8,7 @@ public struct ValidatedTextField: View {
     @ObservedObject var formValidator: FormValidator
     let rulesProvider: (() -> Rules)?
     let update: Binding<Int>?
+    @FocusState private var isFocused: Bool
     
     
     public init(_ title:String, text: Binding<String>, formValidator: FormValidator, rules: String) {
@@ -39,6 +40,15 @@ public struct ValidatedTextField: View {
 
     public var body: some View {
         TextField(title, text: $text)
-            .rules(formValidator: formValidator, $text, rules.rules, fieldId: title, rulesProvider: rulesProvider, update: update)
+            .rules(
+                formValidator: formValidator,
+                $text,
+                rules.rules,
+                fieldId: title,
+                rulesProvider: rulesProvider,
+                update: update,
+                onFocusRequested: { isFocused = true }
+            )
+            .focused($isFocused)
     }
 }

@@ -9,15 +9,23 @@ public struct RulesViewModifier : ViewModifier {
     @State var invalidRules: Rules? = nil
     @Binding var update: Int
     let rulesProvider: (() -> Rules)?
+    let onFocusRequested: (() -> Void)?
     
 
     public func body(content: Content) -> some View {
         VStack(alignment: .leading) {
             content
             if let invalid = invalidRules, !invalid.errorMessage.isEmpty {
-                Text(invalid.errorMessage)
-                    .foregroundStyle(.black.opacity(0.5))
-                    .font(.caption)
+                Button(action: {
+                    onFocusRequested?()
+                }) {
+                    Text(invalid.errorMessage)
+                        .foregroundStyle(.black.opacity(0.5))
+                        .font(.caption)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(PlainButtonStyle())
             }
         }
         .onAppear {
@@ -53,25 +61,25 @@ public struct RulesViewModifier : ViewModifier {
 
 @available(iOS 15.0, *)
 public extension TextField {
-    func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: [Rule], fieldId:String, rulesProvider: (() -> Rules)? = nil, update: Binding<Int>? = nil) -> some View {
+    func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: [Rule], fieldId:String, rulesProvider: (() -> Rules)? = nil, update: Binding<Int>? = nil, onFocusRequested: (() -> Void)? = nil) -> some View {
         return modifier(RulesViewModifier(
             validator: formValidator,
             text: text,
             rules: Rules(rules),
             fieldID: fieldId,
             update: update ?? Binding.constant(0),
-            rulesProvider: rulesProvider)
-        )
+            rulesProvider: rulesProvider,
+            onFocusRequested: onFocusRequested))
     }
 
-    func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: String, fieldId:String, rulesProvider: (() -> Rules)? = nil, update: Binding<Int>? = nil) -> some View {
+    func rules(formValidator: FormValidator, _ text: Binding<String>, _ rules: String, fieldId:String, rulesProvider: (() -> Rules)? = nil, update: Binding<Int>? = nil, onFocusRequested: (() -> Void)? = nil) -> some View {
         return modifier(RulesViewModifier(
             validator: formValidator,
             text: text,
             rules: Rules(stringLiteral: rules),
             fieldID: fieldId,
             update: update ?? Binding.constant(0),
-            rulesProvider: rulesProvider)
-        )
+            rulesProvider: rulesProvider,
+            onFocusRequested: onFocusRequested))
     }
 }
