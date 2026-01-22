@@ -28,6 +28,7 @@ public struct Rules : ExpressibleByStringLiteral {
         case "nif"                  : return RuleNif(nationality: params.last)
         case "unique"               : return RuleUnique(existing: params.last?.explode(",") ?? [])
         case "url"                  : return RuleUrl()
+        case "ip"                   : return RuleIp()
         default                     : return nil
         }
     }
