@@ -34,6 +34,8 @@
 		EA1A0C742D085C0500518928 /* RuleRegexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C732D085BFE00518928 /* RuleRegexp.swift */; };
 		EA1A0C762D085C4F00518928 /* RuleRegexpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */; };
 		EA1A0C782D085CDA00518928 /* RuleUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A0C772D085CDA00518928 /* RuleUrl.swift */; };
+		F5FE9C9C09064FE0B9BE7A26 /* RuleIp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C0A6DA62147E28D38A781 /* RuleIp.swift */; };
+		F3B2FA2F789F426CB2890B20 /* RuleIpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE381B85AFB44D6A32A60FD /* RuleIpTest.swift */; };
 		EAFDCCD828DC71BD0038612F /* RuleUnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCCD728DC71BD0038612F /* RuleUnique.swift */; };
 		EAFDCCDA28DC73270038612F /* ValidationTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCCD928DC73270038612F /* ValidationTranslator.swift */; };
 		F63AA1E82E9F9DB300DBAF39 /* RuleNifPortugal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63AA1DF2E9F9DB300DBAF39 /* RuleNifPortugal.swift */; };
@@ -96,6 +98,8 @@
 		EA1A0C732D085BFE00518928 /* RuleRegexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleRegexp.swift; sourceTree = "<group>"; };
 		EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleRegexpTest.swift; sourceTree = "<group>"; };
 		EA1A0C772D085CDA00518928 /* RuleUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleUrl.swift; sourceTree = "<group>"; };
+		866C0A6DA62147E28D38A781 /* RuleIp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleIp.swift; sourceTree = "<group>"; };
+		9BE381B85AFB44D6A32A60FD /* RuleIpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleIpTest.swift; sourceTree = "<group>"; };
 		EAFDCCD728DC71BD0038612F /* RuleUnique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleUnique.swift; sourceTree = "<group>"; };
 		EAFDCCD928DC73270038612F /* ValidationTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationTranslator.swift; sourceTree = "<group>"; };
 		F63AA1DD2E9F9DB300DBAF39 /* RuleNifDominicanRepublic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleNifDominicanRepublic.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				F63AA1F12E9F9DC500DBAF39 /* RuleNifTest.swift */,
 				F63AA1F22E9F9DC500DBAF39 /* SpainNifRuleTest.swift */,
 				EA1A0C752D085C4700518928 /* RuleRegexpTest.swift */,
+				9BE381B85AFB44D6A32A60FD /* RuleIpTest.swift */,
 				BBB84B02248D23B3004A7C76 /* Info.plist */,
 				B8EAC2B82DA5236F00329689 /* RuleDominicanTaxIdentificationNumberTest.swift */,
 			);
@@ -202,6 +207,7 @@
 			children = (
 				F63AA1E72E9F9DB300DBAF39 /* NIF */,
 				EA1A0C772D085CDA00518928 /* RuleUrl.swift */,
+				866C0A6DA62147E28D38A781 /* RuleIp.swift */,
 				EA1A0C732D085BFE00518928 /* RuleRegexp.swift */,
 				EAFDCCD728DC71BD0038612F /* RuleUnique.swift */,
 				BBB84B0F248D23F6004A7C76 /* RuleContainsNumber.swift */,
@@ -459,6 +465,7 @@
 			files = (
 				BBB84AEE248D23B0004A7C76 /* ViewController.swift in Sources */,
 				EA1A0C782D085CDA00518928 /* RuleUrl.swift in Sources */,
+				F5FE9C9C09064FE0B9BE7A26 /* RuleIp.swift in Sources */,
 				F63AA1E82E9F9DB300DBAF39 /* RuleNifPortugal.swift in Sources */,
 				F63AA1E92E9F9DB300DBAF39 /* NIE.swift in Sources */,
 				F63AA1EA2E9F9DB300DBAF39 /* CIF.swift in Sources */,
@@ -495,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA1A0C762D085C4F00518928 /* RuleRegexpTest.swift in Sources */,
+				F3B2FA2F789F426CB2890B20 /* RuleIpTest.swift in Sources */,
 				B8EAC2B92DA5236F00329689 /* RuleDominicanTaxIdentificationNumberTest.swift in Sources */,
 				F63AA1F32E9F9DC500DBAF39 /* PortugalNifRuleTest.swift in Sources */,
 				F63AA1F42E9F9DC500DBAF39 /* RuleNifTest.swift in Sources */,
